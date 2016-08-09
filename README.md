@@ -9,4 +9,4 @@ Getting Started
 1. Pull down dependencies (including Drupal core): `composer install`
 1. `cd web`
 1. Install Drupal and import our config: `drush si  --uri=http://hpc.massforms8.mass.gov --db-url=mysql://root:@127.0.0.1:33067/hpc_massforms8_mass_gov minimal --config-dir=../config/hpc.massforms8.mass.gov/sync -v`
-1. Open a browser and login as admin: `drush uli`
+1. Open a browser and login as admin: `drush @hpc uli`

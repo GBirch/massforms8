@@ -21,7 +21,9 @@
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "~8.0",
         "drush/drush": "8.x-dev",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+        "drupal/field_group": "~8.0",
+        "drupal/state_machine": "~8.0"
     },
     "require-dev": {
         "behat/mink": "~1.7",

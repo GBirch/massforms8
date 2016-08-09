@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "782a09009c00710726594e7b2f01759d",
-    "content-hash": "b1a3b6c929f378ecb278f1edefdd1258",
+    "hash": "76d9190bb07a8ae0b61c376e021e581d",
+    "content-hash": "552a4cfba224b2f523024800e0ec33c3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1160,16 +1160,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "8.1.3",
+            "version": "8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "fec57947d9cc3ae8978bd747cb3d60ec9864e912"
+                "reference": "e021bd05173acef5e3303e12d30fe2bbc1947110"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/fec57947d9cc3ae8978bd747cb3d60ec9864e912",
-                "reference": "fec57947d9cc3ae8978bd747cb3d60ec9864e912",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/e021bd05173acef5e3303e12d30fe2bbc1947110",
+                "reference": "e021bd05173acef5e3303e12d30fe2bbc1947110",
                 "shasum": ""
             },
             "require": {
@@ -1196,7 +1196,6 @@
                 "drush",
                 "drush.launcher",
                 "drush.php",
-                "drush.bat",
                 "drush.complete.sh"
             ],
             "type": "library",
@@ -1259,7 +1258,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2016-07-18 22:02:09"
+            "time": "2016-08-06 11:55:38"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -5526,7 +5525,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drush/drush": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

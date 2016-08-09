@@ -1,0 +1,14 @@
+uuid: 92297fa6-715b-4b48-a03c-f6ee7eb68664
+name: 'HPC Form'
+mail: tt+massforms8@tech-tamer.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

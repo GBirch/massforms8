@@ -14,6 +14,14 @@ Getting Started
     1. `../vendor/bin/drush @hpc runserver`. This uses PHP's built-in web server. 
 1. Open a browser and login as admin: `drush @hpc uli`
 
+Development Notes
+==============
+1. After every pull, run composer install to add/subtract any dependencies. See Tips for Windows below.
+1. After every composer install, run drush cr.
+1. Install new modules and themes from contrib by adding them to composer.json, either manually or composer require drupal/module_name "~8.0"
+
 Tips
 ==============
 1. `drush use @hpc` is a good way to avoid having to type an alias over and over. In order to see what 'site' you have _used_, run `drush init`.
+1. To use the drupal console with a multisite install, you must pass the --uri= parameter.  E.g.: drupal --uri=hpc.massforms8.mass.gov state:debug
+1. If using Windows, not using a bash shell and already have drush and drupal console working, you will want to rename /vendor/bin to /vendor/bin-DISABLED so that you can use your local setup.  You will need to re-do this after every composer install.

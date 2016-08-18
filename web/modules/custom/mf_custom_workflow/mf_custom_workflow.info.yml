@@ -1,0 +1,7 @@
+name: MassForms Custom Workflow
+type: module
+description: Workflow(s) and form configuration for a site.
+core: 8.x
+package: MassForms
+dependencies:
+  - state_machine

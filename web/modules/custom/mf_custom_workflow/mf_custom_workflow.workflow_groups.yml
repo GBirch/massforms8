@@ -1,0 +1,4 @@
+# Defines workflow group for the Submission entity type
+submission:
+  label: Submission Workflow
+  entity_type: submission

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mf_custom_workflow.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mf_custom_workflow_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mf_custom_workflow module.
+    case 'help.page.mf_custom_workflow':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Holds workflows and form configuration for a site') . '</p>';
+      return $output;
+
+    default:
+  }
+}

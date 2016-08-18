@@ -1,0 +1,42 @@
+hpc:
+  id: hpc
+  label: HPC
+  group: submission
+  states:
+    draft:
+      label: Draft
+    submitted:
+      label: Submitted
+    complete:
+      label: Complete
+    stage_1:
+      label: Passed Stage 1 Review
+    approved:
+      label: Approved
+    denied:
+      label: Denied
+  transitions:
+    submit:
+      label: Submit
+      from: [draft]
+      to: submitted
+    confirm_complete:
+      label: Submission is complete
+      from: [submitted]
+      to: complete
+    incomplete:
+      label: Submission is not complete
+      from: [submitted]
+      to: draft
+    stage_1_ok:
+      label: Submission passes Stage 1 review
+      from: [complete]
+      to: stage_1
+    approve:
+      label: Submission approved
+      from: [stage_1]
+      to: approved
+    deny:
+      label: Submission denied
+      from: [complete, stage_1]
+      to: denied

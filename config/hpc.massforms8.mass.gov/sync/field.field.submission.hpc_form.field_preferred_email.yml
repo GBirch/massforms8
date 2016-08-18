@@ -1,0 +1,19 @@
+uuid: 388e2c8f-e200-4572-8003-6e78f7e2cd13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_preferred_email
+    - mf_submission.submission_type.hpc_form
+id: submission.hpc_form.field_preferred_email
+field_name: field_preferred_email
+entity_type: submission
+bundle: hpc_form
+label: 'Preferred Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

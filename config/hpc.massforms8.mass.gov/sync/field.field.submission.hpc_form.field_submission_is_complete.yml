@@ -1,0 +1,23 @@
+uuid: 82e94a38-097d-4ea1-bd31-c899a3bc4a75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_submission_is_complete
+    - mf_submission.submission_type.hpc_form
+  module:
+    - options
+id: submission.hpc_form.field_submission_is_complete
+field_name: field_submission_is_complete
+entity_type: submission
+bundle: hpc_form
+label: 'Submission is Complete'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

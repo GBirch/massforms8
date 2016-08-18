@@ -1,0 +1,30 @@
+uuid: 7762778d-f279-42d7-98e2-75acd3771576
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_submission_is_complete
+field_name: field_submission_is_complete
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: Pending
+    -
+      value: '1'
+      label: Complete
+    -
+      value: '2'
+      label: 'Not Complete'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

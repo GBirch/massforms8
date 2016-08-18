@@ -1,0 +1,23 @@
+uuid: 08c3b5eb-0915-42a3-b22f-0558a8358ef1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_submission_approved
+    - mf_submission.submission_type.hpc_form
+  module:
+    - options
+id: submission.hpc_form.field_submission_approved
+field_name: field_submission_approved
+entity_type: submission
+bundle: hpc_form
+label: 'Submission Approved'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

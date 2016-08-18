@@ -1,0 +1,23 @@
+uuid: 1460ecae-aee5-4c94-accf-92127a8829f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_submission_passes_stage_1
+    - mf_submission.submission_type.hpc_form
+  module:
+    - options
+id: submission.hpc_form.field_submission_passes_stage_1
+field_name: field_submission_passes_stage_1
+entity_type: submission
+bundle: hpc_form
+label: 'Submission passes Stage 1'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

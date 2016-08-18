@@ -1,0 +1,107 @@
+uuid: e7396fd0-1052-450d-891e-227d158a939f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.hpc_form.field_preferred_email
+    - field.field.submission.hpc_form.field_submission_approved
+    - field.field.submission.hpc_form.field_submission_date
+    - field.field.submission.hpc_form.field_submission_is_complete
+    - field.field.submission.hpc_form.field_submission_passes_stage_1
+    - field.field.submission.hpc_form.field_submission_status
+    - field.field.submission.hpc_form.field_your_name
+    - mf_submission.submission_type.hpc_form
+  module:
+    - datetime
+    - field_group
+third_party_settings:
+  field_group:
+    group_application:
+      children:
+        - field_your_name
+        - field_preferred_email
+        - field_submission_date
+      parent_name: ''
+      weight: 1
+      label: Application
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_review:
+      children:
+        - field_submission_is_complete
+        - field_submission_passes_stage_1
+        - field_submission_approved
+        - field_submission_status
+      parent_name: ''
+      weight: 2
+      label: Review
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: submission.hpc_form.default
+targetEntityType: submission
+bundle: hpc_form
+mode: default
+content:
+  field_preferred_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+  field_submission_approved:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_submission_date:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_submission_is_complete:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_submission_passes_stage_1:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_submission_status:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_your_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

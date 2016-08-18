@@ -1,0 +1,21 @@
+uuid: fe8cd9a5-5351-4db0-9b74-670b0dac1d11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_submission_date
+    - mf_submission.submission_type.hpc_form
+  module:
+    - datetime
+id: submission.hpc_form.field_submission_date
+field_name: field_submission_date
+entity_type: submission
+bundle: hpc_form
+label: 'Submission Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

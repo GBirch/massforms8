@@ -1,0 +1,105 @@
+uuid: 48c9aff8-abc5-4e8b-b775-d8d6e698895e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.hpc_form.field_preferred_email
+    - field.field.submission.hpc_form.field_submission_approved
+    - field.field.submission.hpc_form.field_submission_date
+    - field.field.submission.hpc_form.field_submission_is_complete
+    - field.field.submission.hpc_form.field_submission_passes_stage_1
+    - field.field.submission.hpc_form.field_submission_status
+    - field.field.submission.hpc_form.field_your_name
+    - mf_submission.submission_type.hpc_form
+  module:
+    - datetime
+    - field_group
+    - options
+third_party_settings:
+  field_group:
+    group_application:
+      children:
+        - field_your_name
+        - field_preferred_email
+        - field_submission_date
+      parent_name: ''
+      weight: 1
+      label: Application
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+    group_review:
+      children:
+        - field_submission_status
+        - field_submission_is_complete
+        - field_submission_passes_stage_1
+        - field_submission_approved
+      parent_name: ''
+      weight: 5
+      label: Review
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+id: submission.hpc_form.default
+targetEntityType: submission
+bundle: hpc_form
+mode: default
+content:
+  field_preferred_email:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_submission_approved:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_submission_date:
+    weight: 4
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_submission_is_complete:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_submission_passes_stage_1:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_submission_status:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_your_name:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  name:
+    label: above
+    type: string
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  user_id: true

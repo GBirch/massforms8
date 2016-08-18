@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dd636df6fd55cfddb5e5a5f029b7fb3b",
-    "content-hash": "62d5bdd9d0f325eb3d130cf34f85186a",
+    "hash": "7eb36681be480db09c9cfd3b2046d83a",
+    "content-hash": "0892e6ff1eb2423ca2d11899cfbb48b9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -900,6 +900,50 @@
             "time": "2016-05-25 21:59:48"
         },
         {
+            "name": "drupal/admin_toolbar",
+            "version": "8.1.16",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/admin_toolbar.git",
+                "reference": "53a3c9fbb3709d5629b0992df63ffb1f43c94d2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.16.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/toolbar": "8.*"
+            },
+            "replace": {
+                "drupal/admin_toolbar_tools": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/admin_toolbar_tools"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mohamed Anis Taktak",
+                    "homepage": "https://www.drupal.org/u/matio89"
+                }
+            ],
+            "description": "Provides a drop-down menu interface to the core Drupal Toolbar.",
+            "homepage": "http://drupal.org/project/admin_toolbar",
+            "time": "2016-07-28 09:57:05"
+        },
+        {
             "name": "drupal/console",
             "version": "1.0.0-beta5",
             "source": {
@@ -1233,12 +1277,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "e021bd05173acef5e3303e12d30fe2bbc1947110"
+                "reference": "b6d7308e50c9a94811d8378109aa7601070cebb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/e021bd05173acef5e3303e12d30fe2bbc1947110",
-                "reference": "e021bd05173acef5e3303e12d30fe2bbc1947110",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/b6d7308e50c9a94811d8378109aa7601070cebb9",
+                "reference": "b6d7308e50c9a94811d8378109aa7601070cebb9",
                 "shasum": ""
             },
             "require": {
@@ -1327,7 +1371,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2016-08-06 11:55:38"
+            "time": "2016-08-18 02:57:24"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -5280,23 +5324,23 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.3.7",
+            "version": "1.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "4e8f0da10ac5802913afc151413bc8c53b6c2716"
+                "reference": "be2c607e43ce4c89ecd60e75c6a85c126e754aea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/4e8f0da10ac5802913afc151413bc8c53b6c2716",
-                "reference": "4e8f0da10ac5802913afc151413bc8c53b6c2716",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/be2c607e43ce4c89ecd60e75c6a85c126e754aea",
+                "reference": "be2c607e43ce4c89ecd60e75c6a85c126e754aea",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.4"
+                "phpunit/phpunit": "^4.8 || ^5.0"
             },
             "type": "library",
             "extra": {
@@ -5326,7 +5370,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2016-05-17 03:18:57"
+            "time": "2016-08-18 05:49:44"
         },
         {
             "name": "sebastian/exporter",

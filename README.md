@@ -13,3 +13,7 @@ Getting Started
     1. Point Acquia Dev Desktop or other web server at the `web` directory.
     1. `../vendor/bin/drush @hpc runserver`. This uses PHP's built-in web server. 
 1. Open a browser and login as admin: `drush @hpc uli`
+
+Tips
+==============
+1. `drush use @hpc` is a good way to avoid having to type an alias over and over. In order to see what 'site' you have _used_, run `drush init`.

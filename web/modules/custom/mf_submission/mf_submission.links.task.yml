@@ -1,0 +1,17 @@
+# Submission routing definition
+entity.submission.canonical:
+  route_name: entity.submission.canonical
+  base_route: entity.submission.canonical
+  title: 'View'
+
+entity.submission.edit_form:
+  route_name: entity.submission.edit_form
+  base_route: entity.submission.canonical
+  title: Edit
+
+entity.submission.delete_form:
+  route_name:  entity.submission.delete_form
+  base_route:  entity.submission.canonical
+  title: Delete
+  weight: 10
+

@@ -1,0 +1,11 @@
+entity.submission.add_form:
+  route_name: 'entity.submission.add_page'
+  title: 'Add Submission'
+  appears_on:
+    - entity.submission.collection
+entity.submission_type.add_form:
+  route_name: 'entity.submission_type.add_form'
+  title: 'Add Submission type'
+  appears_on:
+    - entity.submission_type.collection
+

@@ -1,0 +1,22 @@
+add submission entities:
+  title: 'Create new Submission entities'
+
+administer submission entities:
+  title: 'Administer Submission entities'
+  description: 'Allow to access the administration form to configure Submission entities.'
+  restrict access: true
+
+delete submission entities:
+  title: 'Delete Submission entities'
+
+edit submission entities:
+  title: 'Edit Submission entities'
+
+access submission overview:
+  title: 'Access the Submission overview page'
+
+view published submission entities:
+  title: 'View published Submission entities'
+
+view unpublished submission entities:
+  title: 'View unpublished Submission entities'

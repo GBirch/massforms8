@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains mf_submission.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mf_submission_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mf_submission module.
+    case 'help.page.mf_submission':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Submission entity for MassForms8') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function mf_submission_theme() {
+  $theme = [];
+  $theme['submission'] = array(
+    'render element' => 'elements',
+    'file' => 'submission.page.inc',
+    'template' => 'submission',
+  );
+  $theme['submission_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'submission.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function mf_submission_theme_suggestions_submission(array $variables) {
+  $suggestions = array();
+  $entity = $variables['elements']['#submission'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'submission__' . $sanitized_view_mode;
+  $suggestions[] = 'submission__' . $entity->bundle();
+  $suggestions[] = 'submission__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'submission__' . $entity->id();
+  $suggestions[] = 'submission__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

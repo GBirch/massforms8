@@ -1,0 +1,24 @@
+# Submission entities parent management menu item
+#entity.submission.manage:
+#  title: 'Submissions'
+#  route_name: entity.submission.manage
+#  description: 'Manage Submissions'
+#  parent: system.admin_structure
+#  weight: 100
+
+# Submission menu items definition
+entity.submission.collection:
+  title: 'Submission list'
+  route_name: entity.submission.collection
+  description: 'List Submission entities'
+  parent: system.admin_structure
+  weight: 100
+
+# Submission type menu items definition
+entity.submission_type.collection:
+  title: 'Submission type'
+  route_name: entity.submission_type.collection
+  description: 'List Submission type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

@@ -11,7 +11,7 @@ id: submission.hpc_form.field_submission_approved
 field_name: field_submission_approved
 entity_type: submission
 bundle: hpc_form
-label: 'Submission Approved'
+label: 'Submission approved by department head'
 description: ''
 required: false
 translatable: false

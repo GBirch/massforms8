@@ -11,7 +11,7 @@ id: submission.hpc_form.field_submission_passes_stage_1
 field_name: field_submission_passes_stage_1
 entity_type: submission
 bundle: hpc_form
-label: 'Submission passes Stage 1'
+label: 'Submission reviewed by stage 1 reviewers'
 description: ''
 required: false
 translatable: false

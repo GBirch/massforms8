@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'lImjENPh3-HZhYGoTLVqC1LD6YRhoyN4gfHT4nd2Ddd94roFNM8jTFiEuj7L3qG4i4qYaZ-1qg';
 
 /**
  * Deployment identifier.
@@ -714,3 +714,15 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$databases['default']['default'] = array (
+  'database' => 'massforms8_mass_gov',
+  'username' => 'massforms8',
+  'password' => '',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['install_profile'] = 'minimal';
+$config_directories['sync'] = 'sites/default/files/config_SzHDtZ-e7nFqe4E0dlVGTcMATOJqMk-_fnPEAPGMadTcGOn3CHqjubRxqR8wIz8n_rOjAkqZ-w/sync';

@@ -11,7 +11,7 @@ id: submission.hpc_form.field_submission_is_complete
 field_name: field_submission_is_complete
 entity_type: submission
 bundle: hpc_form
-label: 'Submission is Complete'
+label: 'Submission checked for completeness'
 description: ''
 required: false
 translatable: false

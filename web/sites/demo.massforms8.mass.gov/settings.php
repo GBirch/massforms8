@@ -717,7 +717,7 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 require __DIR__ . '/../settings.shared.php';
 
 $databases['default']['default'] = array (
-  'database' => 'hpc_massforms8_mass_gov',
+  'database' => 'demo_massforms8_mass_gov',
   'username' => 'massforms8',
   'password' => '',
   'prefix' => '',

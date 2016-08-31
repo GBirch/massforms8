@@ -2,8 +2,8 @@
 
 $root['root'] = dirname(__DIR__). '/web';
 
-$aliases['hpc'] = $root + array(
-  'uri' => 'http://hpc.massforms8.mass.gov/',
+$aliases['demo'] = $root + array(
+  'uri' => 'http://demo.massforms8.mass.gov/',
 );
 
 // Adjust alias for local configuration as needed.

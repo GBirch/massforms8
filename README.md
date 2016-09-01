@@ -10,7 +10,7 @@ Getting Started
 1. `cd web`
 1. Install Drupal and import our config:
     1. If using Acquia Dev Desktop: `../vendor/bin/drush si  --uri=http://demo.massforms8.mass.gov --db-url=mysql://root:@127.0.0.1:33067/demo_massforms8_mass_gov minimal --config-dir=../config/demo.massforms8.mass.gov/sync -v`
-    1. If using Drupal VM: `drush si  --uri=http://demo.massforms8.mass.gov --db-url=mysql://massforms8:@localhost/demo_massforms8_mass_gov minimal --config-dir=../config/demo.massforms8.mass.gov/sync -v`
+    1. If using Drupal VM: `drush si  --uri=http://demo.massforms8.mass.gov --db-url=mysql://massforms8:@localhost/demo_massforms8_mass_gov minimal --config-dir=../config/demo.massforms8.mass.gov/sync --account-name=massforms8 --account-pass=massforms8 --site-name='MassForms8 Demo' -v`
 1. Web Server setup. Pick a solution: 
     1. Point Acquia Dev Desktop or other web server at the `web` directory.
     1. `../vendor/bin/drush @demo runserver`. This uses PHP's built-in web server. 

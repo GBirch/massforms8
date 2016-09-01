@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\mf_submission\Entity;
+namespace Drupal\mf_review\Entity;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
@@ -10,35 +10,35 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Submission entity.
+ * Defines the Review entity.
  *
- * @ingroup mf_submission
+ * @ingroup mf_review
  *
  * @ContentEntityType(
- *   id = "submission",
- *   label = @Translation("Submission"),
- *   bundle_label = @Translation("Submission type"),
+ *   id = "review",
+ *   label = @Translation("Review"),
+ *   bundle_label = @Translation("Review type"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\mf_submission\SubmissionListBuilder",
- *     "views_data" = "Drupal\mf_submission\Entity\SubmissionViewsData",
- *     "translation" = "Drupal\mf_submission\SubmissionTranslationHandler",
+ *     "list_builder" = "Drupal\mf_review\ReviewListBuilder",
+ *     "views_data" = "Drupal\mf_review\Entity\ReviewViewsData",
+ *     "translation" = "Drupal\mf_review\ReviewTranslationHandler",
  *
  *     "form" = {
- *       "default" = "Drupal\mf_submission\Form\SubmissionForm",
- *       "add" = "Drupal\mf_submission\Form\SubmissionForm",
- *       "edit" = "Drupal\mf_submission\Form\SubmissionForm",
- *       "delete" = "Drupal\mf_submission\Form\SubmissionDeleteForm",
+ *       "default" = "Drupal\mf_review\Form\ReviewForm",
+ *       "add" = "Drupal\mf_review\Form\ReviewForm",
+ *       "edit" = "Drupal\mf_review\Form\ReviewForm",
+ *       "delete" = "Drupal\mf_review\Form\ReviewDeleteForm",
  *     },
- *     "access" = "Drupal\mf_submission\SubmissionAccessControlHandler",
+ *     "access" = "Drupal\mf_review\ReviewAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\mf_submission\SubmissionHtmlRouteProvider",
+ *       "html" = "Drupal\mf_review\ReviewHtmlRouteProvider",
  *     },
  *   },
- *   base_table = "submission",
- *   data_table = "submission_field_data",
+ *   base_table = "review",
+ *   data_table = "review_field_data",
  *   translatable = TRUE,
-  *   admin_permission = "administer submission entities",
+  *   admin_permission = "administer review entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "bundle" = "type",
@@ -49,18 +49,18 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/submission/{submission}",
- *     "add-page" = "/admin/structure/submission/add",
- *     "add-form" = "/admin/structure/submission/add/{submission_type}",
- *     "edit-form" = "/admin/structure/submission/{submission}/edit",
- *     "delete-form" = "/admin/structure/submission/{submission}/delete",
- *     "collection" = "/admin/structure/submission",
+ *     "canonical" = "/admin/structure/review/{review}",
+ *     "add-page" = "/admin/structure/review/add",
+ *     "add-form" = "/admin/structure/review/add/{review_type}",
+ *     "edit-form" = "/admin/structure/review/{review}/edit",
+ *     "delete-form" = "/admin/structure/review/{review}/delete",
+ *     "collection" = "/admin/structure/review",
  *   },
- *   bundle_entity_type = "submission_type",
- *   field_ui_base_route = "entity.submission_type.edit_form"
+ *   bundle_entity_type = "review_type",
+ *   field_ui_base_route = "entity.review_type.edit_form"
  * )
  */
-class Submission extends ContentEntityBase implements SubmissionInterface {
+class Review extends ContentEntityBase implements ReviewInterface {
 
   use EntityChangedTrait;
 
@@ -72,35 +72,6 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
     $values += array(
       'user_id' => \Drupal::currentUser()->id(),
     );
-  }
-
-  public function preSave(EntityStorageInterface $storage) {
-    parent::preSave($storage);
-    // TODO: populate submitted_time field.
-    // Set name of submission
-    if ( $this->isNew() || '' == $this->getName() ) {
-      $this->autoName();
-    }
-    // TODO: trigger autoname on change of status?
-  }
-
-  protected function autoName() {
-    $initial_time = $this->getCreatedTime();
-    if ( $this->isNew() ) {
-      $verb = t('created');
-      $timestamp = empty($initial_time) ? REQUEST_TIME : $initial_time;
-    }
-    if ( $this->isPublished() ) {
-      $verb = t('submitted');
-      $timestamp = $this->getSubmittedTime();
-    }
-    $name = $this->type->entity->label() . ' created ' . \Drupal::service('date.formatter')->format(REQUEST_TIME);
-    $this->setName($name);
-  }
-
-  protected function getSubmittedTime() {
-    // TODO: Edit this once we have a submitted_time field.
-    empty($this->getCreatedTime()) ? REQUEST_TIME : $this->getCreatedTime();
   }
 
   /**
@@ -193,7 +164,7 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Submission entity.'))
+      ->setDescription(t('The user ID of author of the Review entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -218,27 +189,27 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Submission entity.'))
+      ->setDescription(t('The name of the Review entity.'))
       ->setSettings(array(
-        'max_length' => 255,
+        'max_length' => 50,
         'text_processing' => 0,
       ))
       ->setDefaultValue('')
       ->setDisplayOptions('view', array(
-        'label' => 'hidden',
+        'label' => 'above',
         'type' => 'string',
         'weight' => -4,
       ))
       ->setDisplayOptions('form', array(
-        'type' => 'hidden',
+        'type' => 'string_textfield',
         'weight' => -4,
       ))
-      ->setDisplayConfigurable('form', FALSE)
+      ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Submission is published.'))
+      ->setDescription(t('A boolean indicating whether the Review is published.'))
       ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')

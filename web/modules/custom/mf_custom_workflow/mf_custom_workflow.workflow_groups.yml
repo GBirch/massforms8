@@ -1,4 +1,4 @@
-# Defines workflow group for the Submission entity type
-submission:
-  label: Submission Workflow
-  entity_type: submission
+# Defines workflow group for the Review entity type
+review:
+  label: Review Workflow
+  entity_type: review

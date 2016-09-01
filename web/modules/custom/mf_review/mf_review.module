@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains mf_review.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mf_review_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mf_review module.
+    case 'help.page.mf_review':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Review entity for MassForms8') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function mf_review_theme() {
+  $theme = [];
+  $theme['review'] = array(
+    'render element' => 'elements',
+    'file' => 'review.page.inc',
+    'template' => 'review',
+  );
+  $theme['review_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'review.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function mf_review_theme_suggestions_review(array $variables) {
+  $suggestions = array();
+  $entity = $variables['elements']['#review'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'review__' . $sanitized_view_mode;
+  $suggestions[] = 'review__' . $entity->bundle();
+  $suggestions[] = 'review__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'review__' . $entity->id();
+  $suggestions[] = 'review__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

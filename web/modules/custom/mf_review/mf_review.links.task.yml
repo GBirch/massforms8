@@ -1,0 +1,17 @@
+# Review routing definition
+entity.review.canonical:
+  route_name: entity.review.canonical
+  base_route: entity.review.canonical
+  title: 'View'
+
+entity.review.edit_form:
+  route_name: entity.review.edit_form
+  base_route: entity.review.canonical
+  title: Edit
+
+entity.review.delete_form:
+  route_name:  entity.review.delete_form
+  base_route:  entity.review.canonical
+  title: Delete
+  weight: 10
+

@@ -1,16 +1,14 @@
-hpc:
-  id: hpc
-  label: HPC
-  group: submission
+demo:
+  id: demo
+  label: demo
+  group: review
   states:
     draft:
       label: Draft
     submitted:
       label: Submitted
-    complete:
-      label: Complete
-    stage_1:
-      label: Passed Stage 1 Review
+    in_process:
+      label: In Process
     approved:
       label: Approved
     denied:
@@ -20,23 +18,19 @@ hpc:
       label: Submit
       from: [draft]
       to: submitted
-    confirm_complete:
-      label: Submission is complete
-      from: [submitted]
-      to: complete
     incomplete:
       label: Submission is not complete
-      from: [submitted]
+      from: [submitted, in_process]
       to: draft
-    stage_1_ok:
-      label: Submission passes Stage 1 review
-      from: [complete]
-      to: stage_1
+    begin_review:
+      label: Submission has entered review
+      from: [submitted]
+      to: in_process
     approve:
       label: Submission approved
-      from: [stage_1]
+      from: [in_process]
       to: approved
     deny:
       label: Submission denied
-      from: [complete, stage_1]
+      from: [submitted, in_process]
       to: denied

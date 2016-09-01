@@ -1,16 +1,14 @@
-uuid: 1a55759e-c23e-4d73-a5df-47426458cbe2
+uuid: 37d5e241-7c9b-40a7-ae62-0b85a6db1650
 langcode: en
 status: true
 dependencies:
   module:
     - mf_review
-    - mf_submission
-id: review.field_review_submission
-field_name: field_review_submission
+id: review.field_review_check_complete
+field_name: field_review_check_complete
 entity_type: review
-type: entity_reference
-settings:
-  target_type: submission
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

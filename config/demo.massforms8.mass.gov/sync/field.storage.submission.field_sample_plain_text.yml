@@ -1,11 +1,11 @@
-uuid: 3a877d12-6667-4238-b803-0c6e0b9f0b9a
+uuid: 28c2c186-a247-4141-a096-80a9f976cb5c
 langcode: en
 status: true
 dependencies:
   module:
     - mf_submission
-id: submission.field_example_text
-field_name: field_example_text
+id: submission.field_sample_plain_text
+field_name: field_sample_plain_text
 entity_type: submission
 type: string
 settings:

@@ -16,6 +16,50 @@ interface ReviewInterface extends ContentEntityInterface, EntityChangedInterface
   // Add get/set methods for your configuration properties here.
 
   /**
+   * Set name of review based on name and id of related submission form.
+   *
+   * @param string|null $form_label
+   * @param int|null $form_id
+   */
+  public function autoName($form_label = NULL, $form_id = NULL);
+
+  /**
+   * Returns the submission entity to which the review is attached.
+   *
+   * @return \Drupal\mf_submission\Entity\SubmissionInterface
+   *   The submission entity on which the review is attached.
+   */
+  public function getSubmissionEntity();
+
+  /**
+   * Returns the ID of the submission entity to which the review is attached.
+   *
+   * @return int
+   *   The ID of the entity to which the comment is attached.
+   */
+  public function getSubmissionEntityId();
+
+
+  /**
+   * Gets the Review stage.
+   *
+   * @return \Drupal\state_machine\Plugin\Field\FieldType\StateItem
+   *   The review StateItem entity.
+   */
+  public function getReviewStage();
+
+  /**
+   * Sets the Review stage.
+   *
+   * @param string $stage_name
+   *   The machine name of the stage.
+   *
+   * @return \Drupal\mf_review\Entity\ReviewInterface
+   *   The called Review entity.
+   */
+  public function setReviewStage($stage_name);
+
+  /**
    * Gets the Review type.
    *
    * @return string

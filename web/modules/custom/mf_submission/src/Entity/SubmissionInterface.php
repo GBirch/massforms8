@@ -16,6 +16,22 @@ interface SubmissionInterface extends ContentEntityInterface, EntityChangedInter
   // Add get/set methods for your configuration properties here.
 
   /**
+   * Constructs a name for the form.
+   *
+   * @param string $verb
+   * @param null $timestamp
+   */
+  public function autoName($verb = 'created', $timestamp = NULL);
+
+  /**
+   * Retrieves the id of the review that relates to this form.
+   *
+   * @return int|null
+   *   The id of the review, or NULL if not found.
+   */
+  public function getReviewId();
+
+  /**
    * Gets the Submission type.
    *
    * @return string
@@ -60,6 +76,25 @@ interface SubmissionInterface extends ContentEntityInterface, EntityChangedInter
    *   The called Submission entity.
    */
   public function setCreatedTime($timestamp);
+
+  /**
+   * Gets the Submission submitted timestamp.
+   *
+   * @return int
+   *   Submitted timestamp of the Submission.
+   */
+  public function getSubmittedTime();
+
+  /**
+   * Sets the Submission submitted timestamp.
+   *
+   * @param int $timestamp
+   *   The Submission submitted timestamp.
+   *
+   * @return \Drupal\mf_submission\Entity\SubmissionInterface
+   *   The called Submission entity.
+   */
+  public function setSubmittedTime($timestamp);
 
   /**
    * Returns the Submission published status indicator.

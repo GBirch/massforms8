@@ -82,6 +82,51 @@ class Review extends ContentEntityBase implements ReviewInterface {
   }
 
   /**
+   * Set name of review based on name and id of related submission form.
+   *
+   * @param string|null $form_label
+   * @param int|null $form_id
+   */
+  public function autoName($form_label = NULL, $form_id = NULL) {
+    if ( !$form_label || !$form_id ) {
+      $form = $this->getSubmissionEntity();
+      $form_label = $form->getName();
+      $form_id = $form->id();
+    }
+    $name = t('Review of form @id: @label', array('@id'=>$form_id, '@label' => $form_label));
+    $this->setName($name);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getSubmissionEntity() {
+    return $this->get('submission_id')->entity;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getSubmissionEntityId() {
+    return $this->get('submission_id')->target_id;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getReviewStage() {
+    return $this->get('review_stage');
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setReviewStage($stage_name) {
+    $this->set('review_stage', $stage_name);
+    return $this;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function getName() {
@@ -191,7 +236,7 @@ class Review extends ContentEntityBase implements ReviewInterface {
       ->setLabel(t('Name'))
       ->setDescription(t('The name of the Review entity.'))
       ->setSettings(array(
-        'max_length' => 50,
+        'max_length' => 255,
         'text_processing' => 0,
       ))
       ->setDefaultValue('')
@@ -219,6 +264,19 @@ class Review extends ContentEntityBase implements ReviewInterface {
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
+
+    $fields['submission_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Submission ID'))
+      ->setDescription(t('The ID of the submission under review.'))
+      ->setRequired(TRUE);
+
+    // TODO:  Need to figure out the settings needed to attach this to the defined workflow.
+    // may need to implement bundleFieldDefinitions().  See Comment.php
+    $fields['review_stage'] = BaseFieldDefinition::create('state')
+      ->setLabel(t('Review Stage'))
+      ->setDescription(t('The current stage of review of the related submission.'))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
 
     return $fields;
   }

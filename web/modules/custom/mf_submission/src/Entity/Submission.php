@@ -8,6 +8,7 @@ use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
+use Drupal\mf_review\Entity\Review;
 
 /**
  * Defines the Submission entity.
@@ -66,42 +67,100 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
 
   /**
    * {@inheritdoc}
+   *
+   * Defaults the form to published state.
    */
   public static function preCreate(EntityStorageInterface $storage_controller, array &$values) {
     parent::preCreate($storage_controller, $values);
+    // For the present, we are setting published to true on creation.
     $values += array(
       'user_id' => \Drupal::currentUser()->id(),
+      'status' => 1,
     );
   }
 
+  /**
+   * {@inheritdoc}
+   *
+   * Sets the name and submitted timestamp of the form.
+   */
   public function preSave(EntityStorageInterface $storage) {
     parent::preSave($storage);
-    // TODO: populate submitted_time field.
-    // Set name of submission
-    if ( $this->isNew() || '' == $this->getName() ) {
+
+    $submitted_time = $this->getSubmittedTime();
+    // If newly published, set submitted timestamp and set/update the name of the submission.
+    if ($this->isPublished() && empty($submitted_time)) {
+      $this->setSubmittedTime($this->getChangedTime());
+      $this->autoName('submitted', $this->getChangedTime());
+    }
+    // Otherwise, if new, set a name for it using defaults.
+    elseif ($this->isNew()) {
       $this->autoName();
     }
-    // TODO: trigger autoname on change of status?
+    // Suspenders and belt: should never be run.
+    elseif ( '' == $this->getName() ) {
+      $verb = $this->isPublished() ? 'submitted' : 'created';
+      if ( $submitted_time ) {
+        $timestamp = $submitted_time;
+      } else {
+        $timestamp = $this->isPublished() ? $this->getChangedTime() : $this->getCreatedTime();
+      }
+      $this->autoName($verb, $timestamp);
+      \Drupal::logger('MassForms Submission')->error('Name supplied for submission %id when it should have had one already', array('@id'=>$this->id()));
+    }
   }
 
-  protected function autoName() {
-    $initial_time = $this->getCreatedTime();
-    if ( $this->isNew() ) {
-      $verb = t('created');
-      $timestamp = empty($initial_time) ? REQUEST_TIME : $initial_time;
+  /**
+   * {@inheritdoc}
+   *
+   * Creates the related review if submission is new.
+   */
+  public function postSave(EntityStorageInterface $storage, $update = TRUE) {
+    parent::postSave($storage, $update);
+
+    if ( !$update ) {
+      // TODO: need to have a more intelligent way to specify which kind of review to create.
+      $review_bundle = 'demo_workflow';
+
+      $review = Review::create(array(
+        'user_id' => 1,
+        'status' => $this->isPublished(),
+        'submission_id' => $this->id(),
+        'type' => $review_bundle,
+        'review_stage' => $this->isPublished() ? 'submitted' : 'draft',
+      ));
+      $review->autoName($this->getName(), $this->id());
+      $review->save();
     }
-    if ( $this->isPublished() ) {
-      $verb = t('submitted');
-      $timestamp = $this->getSubmittedTime();
+    // Consider checking for related review and re-connect form to review if link is broken.
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function autoName($verb = 'created', $timestamp = NULL) {
+    if ( empty($timestamp) ) {
+      $timestamp = REQUEST_TIME;
     }
-    $name = $this->type->entity->label() . ' created ' . \Drupal::service('date.formatter')->format(REQUEST_TIME);
+    $verb = t($verb);
+    $name = $this->type->entity->label() . " $verb " . \Drupal::service('date.formatter')->format($timestamp);
     $this->setName($name);
   }
 
-  protected function getSubmittedTime() {
-    // TODO: Edit this once we have a submitted_time field.
-    empty($this->getCreatedTime()) ? REQUEST_TIME : $this->getCreatedTime();
+  /**
+   * {@inheritdoc}
+   */
+  public function getReviewId() {
+    $review_ids = \Drupal::entityQuery('review')
+      ->condition('submission_id', $this->id())
+      ->execute();
+    if ( !empty($review_ids) ) {
+      return current($review_ids);
+    }
+    return NULL;
   }
+
 
   /**
    * {@inheritdoc}
@@ -137,6 +196,21 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
    */
   public function setCreatedTime($timestamp) {
     $this->set('created', $timestamp);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getSubmittedTime() {
+    return $this->get('submitted')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setSubmittedTime($timestamp) {
+    $this->set('submitted', $timestamp);
     return $this;
   }
 
@@ -192,8 +266,8 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
     $fields = parent::baseFieldDefinitions($entity_type);
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Submission entity.'))
+      ->setLabel(t('Submitted by'))
+      ->setDescription(t('The user ID of the author of the Submission entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -237,17 +311,27 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
-      ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Submission is published.'))
+      ->setLabel(t('Submitted status'))
+      ->setDescription(t('A boolean indicating whether the Submission is submitted.'))
       ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))
-      ->setDescription(t('The time that the entity was created.'));
+      ->setDescription(t('The time that the submission was created.'));
 
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
-      ->setDescription(t('The time that the entity was last edited.'));
+      ->setDescription(t('The time that the submission was last edited.'));
+
+    $fields['submitted'] = BaseFieldDefinition::create('timestamp')
+      ->setLabel(t('Submitted'))
+      ->setDescription(t('The time that the submission was submitted.'))
+      ->setDisplayOptions('view', array(
+        'label' => 'inline',
+        'type' => 'string',
+        'weight' => -4,
+      ))
+      ->setDisplayConfigurable('view', TRUE);
 
     return $fields;
   }

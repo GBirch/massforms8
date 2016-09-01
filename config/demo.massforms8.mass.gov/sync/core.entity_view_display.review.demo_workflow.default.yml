@@ -1,0 +1,43 @@
+uuid: a8903021-7c68-4930-9072-6bc76df628f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.review.demo_workflow.field_review_stage
+    - field.field.review.demo_workflow.field_review_submission
+    - mf_review.review_type.demo_workflow
+  module:
+    - options
+    - user
+id: review.demo_workflow.default
+targetEntityType: review
+bundle: demo_workflow
+mode: default
+content:
+  field_review_stage:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_review_submission:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  name:
+    label: above
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

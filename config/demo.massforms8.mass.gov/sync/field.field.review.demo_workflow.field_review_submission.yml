@@ -1,0 +1,28 @@
+uuid: b492f189-dfeb-45e9-9392-38a6908117f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_review_submission
+    - mf_review.review_type.demo_workflow
+    - mf_submission.submission_type.field_examples
+id: review.demo_workflow.field_review_submission
+field_name: field_review_submission
+entity_type: review
+bundle: demo_workflow
+label: Submission
+description: 'The submission to which this review relates.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:submission'
+  handler_settings:
+    target_bundles:
+      field_examples: field_examples
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: afcd03e0-abf6-4f51-a6e9-c54cc8d03934
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - text
+id: submission.field_example_long_format_text
+field_name: field_example_long_format_text
+entity_type: submission
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,39 @@
+uuid: 9d802ffe-735c-4eca-b16c-28c2a5704cd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.field_examples.field_example_long_format_text
+    - field.field.submission.field_examples.field_example_text
+    - mf_submission.submission_type.field_examples
+  module:
+    - text
+id: submission.field_examples.default
+targetEntityType: submission
+bundle: field_examples
+mode: default
+content:
+  field_example_long_format_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_example_text:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  name: true

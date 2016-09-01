@@ -16,6 +16,7 @@ module:
   menu_link_content: 0
   menu_ui: 0
   mf_custom_workflow: 0
+  mf_review: 0
   mf_submission: 0
   node: 0
   options: 0

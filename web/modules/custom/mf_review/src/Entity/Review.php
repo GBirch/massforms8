@@ -97,6 +97,10 @@ class Review extends ContentEntityBase implements ReviewInterface {
     $this->setName($name);
   }
 
+  public function setSubmissionID($id) {
+    $this->set('submission_id', $id);
+  }
+
   /**
    * {@inheritdoc}
    */
@@ -266,19 +270,32 @@ class Review extends ContentEntityBase implements ReviewInterface {
       ->setDescription(t('The time that the entity was last edited.'));
 
     $fields['submission_id'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Submission ID'))
-      ->setDescription(t('The ID of the submission under review.'))
-      ->setRequired(TRUE);
+      ->setLabel(t('Submission'))
+      ->setDescription(t('The submission under review.'))
+      ->setSetting('target_type', 'submission')
+      ->setRequired(TRUE)
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
 
-    // TODO:  Need to figure out the settings needed to attach this to the defined workflow.
-    // may need to implement bundleFieldDefinitions().  See Comment.php
     $fields['review_stage'] = BaseFieldDefinition::create('state')
       ->setLabel(t('Review Stage'))
       ->setDescription(t('The current stage of review of the related submission.'))
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
+
     return $fields;
+  }
+
+  public static function bundleFieldDefinitions(EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+    $review_type = ReviewType::load($bundle);
+    if ($review_type) {
+      // @TODO: Ability to set form type(s) per review type.
+      $fields['review_stage'] = clone $base_field_definitions['review_stage'];
+      $fields['review_stage']->setSetting('workflow', $review_type->getWorkflowName());
+      return $fields;
+    }
+    return array();
   }
 
 }

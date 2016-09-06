@@ -38,6 +38,26 @@ class ReviewTypeForm extends EntityForm {
     ];
 
     /* You will need additional form elements for your custom properties. */
+    $workflow_manager = \Drupal::service('plugin.manager.workflow');
+    if ($review_type->isNew() || !$review_type->getWorkflowName()) {
+      $options = $workflow_manager->getGroupedLabels('review');
+      $form['workflow_name'] = array(
+        '#type' => 'select',
+        '#default_value' => $review_type->getWorkflowName(),
+        '#title' => t('Workflow'),
+        '#options' => $options,
+        '#description' => t('The workflow can only be set once.')
+      );
+    }
+    else {
+      // @TODO: Get and display the human name of the workflow.
+      $form['workflow_name_display'] = array(
+        '#type' => 'item',
+        '#markup' => $review_type->getWorkflowName(),
+        '#description' => t('Once set, the workflow cannot be changed.'),
+        '#title' => t('Workflow'),
+      );
+    }
 
     return $form;
   }

@@ -35,6 +35,11 @@ use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
  *     "edit-form" = "/admin/structure/review_type/{review_type}/edit",
  *     "delete-form" = "/admin/structure/review_type/{review_type}/delete",
  *     "collection" = "/admin/structure/review_type"
+ *   },
+ *   config_export = {
+ *     "id",
+ *     "label",
+ *     "workflow_name",
  *   }
  * )
  */
@@ -53,5 +58,19 @@ class ReviewType extends ConfigEntityBundleBase implements ReviewTypeInterface {
    * @var string
    */
   protected $label;
+
+  /**
+   * The associated state_machine workflow.
+   *
+   * @var string
+   */
+  protected $workflow_name;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getWorkflowName() {
+    return $this->workflow_name;
+  }
 
 }

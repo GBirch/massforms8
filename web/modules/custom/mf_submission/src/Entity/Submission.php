@@ -118,17 +118,17 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
   public function postSave(EntityStorageInterface $storage, $update = TRUE) {
     parent::postSave($storage, $update);
 
-    if ( !$update ) {
+    if ( !$this->getReviewId() ) {
       // TODO: need to have a more intelligent way to specify which kind of review to create.
       $review_bundle = 'demo_workflow';
 
       $review = Review::create(array(
         'user_id' => 1,
         'status' => $this->isPublished(),
-        'submission_id' => $this->id(),
         'type' => $review_bundle,
-        'review_stage' => $this->isPublished() ? 'submitted' : 'draft',
       ));
+      $review->setSubmissionID($this);
+      $review->setReviewStage($this->isPublished() ? 'submitted' : 'draft');
       $review->autoName($this->getName(), $this->id());
       $review->save();
     }

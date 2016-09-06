@@ -3,13 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.submission.sample_fields_form.field_options_radio
     - field.field.submission.sample_fields_form.field_sample_plain_text
     - mf_submission.submission_type.sample_fields_form
+  module:
+    - options
 id: submission.sample_fields_form.default
 targetEntityType: submission
 bundle: sample_fields_form
 mode: default
 content:
+  field_options_radio:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_sample_plain_text:
     weight: 1
     label: inline

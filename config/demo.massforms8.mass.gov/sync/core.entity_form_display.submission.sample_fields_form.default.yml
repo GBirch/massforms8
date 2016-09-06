@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.submission.sample_fields_form.field_options_radio
     - field.field.submission.sample_fields_form.field_sample_plain_text
     - mf_submission.submission_type.sample_fields_form
 id: submission.sample_fields_form.default
@@ -10,6 +11,11 @@ targetEntityType: submission
 bundle: sample_fields_form
 mode: default
 content:
+  field_options_radio:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
   field_sample_plain_text:
     weight: 0
     settings:
@@ -19,7 +25,7 @@ content:
     type: string_textfield
   user_id:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60

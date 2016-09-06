@@ -28,5 +28,10 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+  submission_id:
+    type: options_select
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   user_id: true

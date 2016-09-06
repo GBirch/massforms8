@@ -34,10 +34,18 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
+  submission_id:
+    type: entity_reference_entity_view
+    weight: 3
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
   user_id:
     label: hidden
     type: entity_reference_label
-    weight: 3
+    weight: 4
     settings:
       link: true
     third_party_settings: {  }

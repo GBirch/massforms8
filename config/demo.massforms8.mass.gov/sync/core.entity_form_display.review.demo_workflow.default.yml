@@ -1,0 +1,37 @@
+uuid: b4e33639-31be-499a-abe5-059cafdfb086
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.review.demo_workflow.field_review_check_complete
+    - mf_review.review_type.demo_workflow
+id: review.demo_workflow.default
+targetEntityType: review
+bundle: demo_workflow
+mode: default
+content:
+  field_review_check_complete:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+  name:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  review_stage:
+    type: options_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  submission_id:
+    type: options_select
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  user_id: true

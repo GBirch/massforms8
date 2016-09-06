@@ -1,0 +1,19 @@
+uuid: ab951694-bb4d-489b-baee-29a9c794a336
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_sample_plain_text
+    - mf_submission.submission_type.sample_fields_form
+id: submission.sample_fields_form.field_sample_plain_text
+field_name: field_sample_plain_text
+entity_type: submission
+bundle: sample_fields_form
+label: 'Plain Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

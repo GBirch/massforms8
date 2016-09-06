@@ -1,0 +1,18 @@
+uuid: 37d5e241-7c9b-40a7-ae62-0b85a6db1650
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_review
+id: review.field_review_check_complete
+field_name: field_review_check_complete
+entity_type: review
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

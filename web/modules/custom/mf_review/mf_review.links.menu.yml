@@ -1,0 +1,16 @@
+# Review menu items definition
+entity.review.collection:
+  title: 'Review list'
+  route_name: entity.review.collection
+  description: 'List Review entities'
+  parent: system.admin_structure
+  weight: 100
+
+# Review type menu items definition
+entity.review_type.collection:
+  title: 'Review type'
+  route_name: entity.review_type.collection
+  description: 'List Review type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

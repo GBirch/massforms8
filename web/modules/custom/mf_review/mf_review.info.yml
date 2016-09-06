@@ -1,0 +1,5 @@
+name: MassForms Review
+type: module
+description: Review entity for MassForms8
+core: 8.x
+package: MassForms

@@ -1,0 +1,34 @@
+uuid: 911d5403-3872-404d-8143-84cf45d76d57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.sample_fields_form.field_options_radio
+    - field.field.submission.sample_fields_form.field_sample_plain_text
+    - mf_submission.submission_type.sample_fields_form
+id: submission.sample_fields_form.default
+targetEntityType: submission
+bundle: sample_fields_form
+mode: default
+content:
+  field_options_radio:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_sample_plain_text:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

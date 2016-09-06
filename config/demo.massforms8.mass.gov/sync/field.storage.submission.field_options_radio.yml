@@ -1,0 +1,30 @@
+uuid: c92ff8b0-4b1d-49b1-bb5a-1f147555b130
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_options_radio
+field_name: field_options_radio
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: a
+      label: 'Option A'
+    -
+      value: b
+      label: 'Option B'
+    -
+      value: c
+      label: 'Option C'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

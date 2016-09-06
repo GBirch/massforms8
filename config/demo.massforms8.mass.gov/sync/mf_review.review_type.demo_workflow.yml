@@ -1,0 +1,7 @@
+uuid: e612c0a2-698c-4a14-ae2a-a0c8d022f1fb
+langcode: en
+status: true
+dependencies: {  }
+id: demo_workflow
+label: 'Demo Workflow'
+workflow_name: demo

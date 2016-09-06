@@ -1,0 +1,21 @@
+uuid: c9ad33da-eb82-4a8d-b257-3846bd3a1273
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_options_radio
+    - mf_submission.submission_type.sample_fields_form
+  module:
+    - options
+id: submission.sample_fields_form.field_options_radio
+field_name: field_options_radio
+entity_type: submission
+bundle: sample_fields_form
+label: 'Options Radio Buttons'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

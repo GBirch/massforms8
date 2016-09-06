@@ -1,0 +1,14 @@
+{
+  "name": "drupal/mf_review",
+  "type": "drupal-module",
+  "description": "Review entity for MassForms8",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/mf_review",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/mf_review",
+    "source": "http://cgit.drupalcode.org/mf_review"
+  },
+  "require": { }
+}

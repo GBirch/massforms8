@@ -7,6 +7,7 @@ use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\mf_submission\Entity\Submission;
 use Drupal\user\UserInterface;
 
 /**
@@ -81,15 +82,13 @@ class Review extends ContentEntityBase implements ReviewInterface {
     return $this->bundle();
   }
 
+
   /**
-   * Set name of review based on name and id of related submission form.
-   *
-   * @param string|null $form_label
-   * @param int|null $form_id
+   * {@inheritdoc}
    */
   public function autoName($form_label = NULL, $form_id = NULL) {
     if ( !$form_label || !$form_id ) {
-      $form = $this->getSubmissionEntity();
+      $form = $this->get('submission_id')->entity;
       $form_label = $form->getName();
       $form_id = $form->id();
     }
@@ -97,22 +96,13 @@ class Review extends ContentEntityBase implements ReviewInterface {
     $this->setName($name);
   }
 
-  public function setSubmissionID($id) {
-    $this->set('submission_id', $id);
-  }
-
   /**
    * {@inheritdoc}
    */
-  public function getSubmissionEntity() {
-    return $this->get('submission_id')->entity;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getSubmissionEntityId() {
-    return $this->get('submission_id')->target_id;
+  public function setSubmission(Submission $submission) {
+    $this->set('submission_id', $submission);
+    $this->setReviewStage($submission->isPublished() ? 'submitted' : 'draft');
+    $this->autoName($submission->getName(), $this->id());
   }
 
   /**

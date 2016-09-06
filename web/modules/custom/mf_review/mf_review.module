@@ -1,5 +1,9 @@
 <?php
 
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\mf_submission\Entity\Submission;
+use Drupal\mf_review\Entity\Review;
+
 /**
  * @file
  * Contains mf_review.module..
@@ -22,6 +26,38 @@ function mf_review_help($route_name, RouteMatchInterface $route_match) {
     default:
   }
 }
+
+/**
+ * Implements hook_entity_insert().
+ */
+function mf_review_submission_insert(EntityInterface $entity) {
+  mf_review_submission_save($entity);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function mf_review_submission_update(EntityInterface $entity) {
+  mf_review_submission_save($entity);
+}
+
+function mf_review_submission_save(Submission $submission) {
+
+  // If submission does not have an attached review, create one.
+  if ( !$submission->getReviewId() ) {
+    // @TODO:  Fix this once reviews are tied to form types
+    $review_bundle = 'demo_workflow';
+    // Create a review of the appropriate type.
+    $review = Review::create(array(
+      'user_id' => 1,
+      'type' => $review_bundle,
+    ));
+    // Add the submission to the review.
+    $review->setSubmission($submission);
+    $review->save();
+  }
+}
+
 
 /**
  * Implements hook_theme().

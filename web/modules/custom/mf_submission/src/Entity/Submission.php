@@ -8,7 +8,7 @@ use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
-use Drupal\mf_review\Entity\Review;
+
 
 /**
  * Defines the Submission entity.
@@ -72,7 +72,7 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
    */
   public static function preCreate(EntityStorageInterface $storage_controller, array &$values) {
     parent::preCreate($storage_controller, $values);
-    // For the present, we are setting published to true on creation.
+    // @TODO:  Add a For the present, we are setting published to true on creation.
     $values += array(
       'user_id' => \Drupal::currentUser()->id(),
       'status' => 1,
@@ -108,32 +108,6 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
       $this->autoName($verb, $timestamp);
       \Drupal::logger('MassForms Submission')->error('Name supplied for submission %id when it should have had one already', array('@id'=>$this->id()));
     }
-  }
-
-  /**
-   * {@inheritdoc}
-   *
-   * Creates the related review if submission is new.
-   */
-  public function postSave(EntityStorageInterface $storage, $update = TRUE) {
-    parent::postSave($storage, $update);
-
-    if ( !$this->getReviewId() ) {
-      // TODO: need to have a more intelligent way to specify which kind of review to create.
-      $review_bundle = 'demo_workflow';
-
-      $review = Review::create(array(
-        'user_id' => 1,
-        'status' => $this->isPublished(),
-        'type' => $review_bundle,
-      ));
-      $review->setSubmissionID($this);
-      $review->setReviewStage($this->isPublished() ? 'submitted' : 'draft');
-      $review->autoName($this->getName(), $this->id());
-      $review->save();
-    }
-    // Consider checking for related review and re-connect form to review if link is broken.
-
   }
 
   /**

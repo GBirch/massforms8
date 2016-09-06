@@ -5,6 +5,7 @@ namespace Drupal\mf_review\Entity;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\user\EntityOwnerInterface;
+use Drupal\mf_submission\Entity\Submission;
 
 /**
  * Provides an interface for defining Review entities.
@@ -22,23 +23,6 @@ interface ReviewInterface extends ContentEntityInterface, EntityChangedInterface
    * @param int|null $form_id
    */
   public function autoName($form_label = NULL, $form_id = NULL);
-
-  /**
-   * Returns the submission entity to which the review is attached.
-   *
-   * @return \Drupal\mf_submission\Entity\SubmissionInterface
-   *   The submission entity on which the review is attached.
-   */
-  public function getSubmissionEntity();
-
-  /**
-   * Returns the ID of the submission entity to which the review is attached.
-   *
-   * @return int
-   *   The ID of the entity to which the comment is attached.
-   */
-  public function getSubmissionEntityId();
-
 
   /**
    * Gets the Review stage.
@@ -66,6 +50,14 @@ interface ReviewInterface extends ContentEntityInterface, EntityChangedInterface
    *   The Review type.
    */
   public function getType();
+
+  /**
+   * Initializes the form/submission reference.
+   *
+   * @param Submission $submission
+   *   The submission entity to which the review refers.
+   */
+  public function setSubmission(Submission $submission);
 
   /**
    * Gets the Review name.

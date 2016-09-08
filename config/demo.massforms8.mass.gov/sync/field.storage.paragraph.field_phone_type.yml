@@ -1,0 +1,30 @@
+uuid: 4b39b4f3-5057-451e-8623-d95945f409e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_phone_type
+field_name: field_phone_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: home
+      label: Home
+    -
+      value: office
+      label: Office
+    -
+      value: mobile
+      label: Mobile
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

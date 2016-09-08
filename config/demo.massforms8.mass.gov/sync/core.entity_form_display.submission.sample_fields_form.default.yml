@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.submission.sample_fields_form.field_address
+    - field.field.submission.sample_fields_form.field_date_and_
     - field.field.submission.sample_fields_form.field_date_popup
     - field.field.submission.sample_fields_form.field_email
     - field.field.submission.sample_fields_form.field_file_upload
@@ -12,7 +13,7 @@ dependencies:
     - field.field.submission.sample_fields_form.field_options_checkboxes
     - field.field.submission.sample_fields_form.field_options_radio
     - field.field.submission.sample_fields_form.field_options_select
-    - field.field.submission.sample_fields_form.field_phone
+    - field.field.submission.sample_fields_form.field_phones
     - field.field.submission.sample_fields_form.field_sample_plain_text
     - field.field.submission.sample_fields_form.field_sip
     - field.field.submission.sample_fields_form.field_website
@@ -23,13 +24,14 @@ dependencies:
     - field_group
     - file
     - link
-    - telephone
+    - paragraphs
 third_party_settings:
   field_group:
     group_personal:
       children:
         - field_sample_plain_text
         - field_phone
+        - field_phones
         - field_email
         - field_address
         - field_website
@@ -48,6 +50,7 @@ third_party_settings:
         - field_options_select
         - field_options_checkboxes
         - field_date_popup
+        - field_date_and_
         - field_sip
         - field_money
         - field_number
@@ -67,62 +70,71 @@ bundle: sample_fields_form
 mode: default
 content:
   field_address:
-    weight: 4
+    weight: 5
     settings:
       default_country: US
     third_party_settings: {  }
     type: address_default
+  field_date_and_:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
   field_date_popup:
-    weight: 5
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
   field_email:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
   field_file_upload:
-    weight: 9
+    weight: 20
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
   field_money:
-    weight: 7
+    weight: 18
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
   field_number:
-    weight: 8
+    weight: 19
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
   field_options_checkboxes:
-    weight: 4
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
   field_options_radio:
-    weight: 2
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
   field_options_select:
-    weight: 3
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: options_select
-  field_phone:
-    weight: 2
+  field_phones:
+    type: entity_reference_paragraphs
+    weight: 3
     settings:
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
     third_party_settings: {  }
-    type: telephone_default
   field_sample_plain_text:
     weight: 1
     settings:
@@ -131,13 +143,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_sip:
-    weight: 6
+    weight: 17
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
   field_website:
-    weight: 5
+    weight: 6
     settings:
       placeholder_url: 'http://example.com'
       placeholder_title: ''

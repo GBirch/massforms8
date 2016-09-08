@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.submission.sample_fields_form.field_address
+    - field.field.submission.sample_fields_form.field_date_and_
     - field.field.submission.sample_fields_form.field_date_popup
     - field.field.submission.sample_fields_form.field_email
     - field.field.submission.sample_fields_form.field_file_upload
@@ -12,7 +13,7 @@ dependencies:
     - field.field.submission.sample_fields_form.field_options_checkboxes
     - field.field.submission.sample_fields_form.field_options_radio
     - field.field.submission.sample_fields_form.field_options_select
-    - field.field.submission.sample_fields_form.field_phone
+    - field.field.submission.sample_fields_form.field_phones
     - field.field.submission.sample_fields_form.field_sample_plain_text
     - field.field.submission.sample_fields_form.field_sip
     - field.field.submission.sample_fields_form.field_website
@@ -20,6 +21,7 @@ dependencies:
   module:
     - address
     - datetime
+    - entity_reference_revisions
     - field_group
     - file
     - link
@@ -30,7 +32,7 @@ third_party_settings:
       children:
         - field_sample_plain_text
         - field_email
-        - field_phone
+        - field_phones
         - field_website
         - field_address
       parent_name: ''
@@ -48,6 +50,7 @@ third_party_settings:
         - field_options_select
         - field_options_checkboxes
         - field_date_popup
+        - field_date_and_
         - field_sip
         - field_money
         - field_number
@@ -68,11 +71,19 @@ bundle: sample_fields_form
 mode: default
 content:
   field_address:
-    weight: 7
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: address_default
+  field_date_and_:
+    weight: 8
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
   field_date_popup:
     weight: 7
     label: inline
@@ -88,13 +99,13 @@ content:
     third_party_settings: {  }
     type: basic_string
   field_file_upload:
-    weight: 11
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
     type: file_default
   field_money:
-    weight: 9
+    weight: 10
     label: inline
     settings:
       thousand_separator: ','
@@ -104,7 +115,7 @@ content:
     third_party_settings: {  }
     type: number_decimal
   field_number:
-    weight: 10
+    weight: 11
     label: inline
     settings:
       thousand_separator: ','
@@ -129,13 +140,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: list_default
-  field_phone:
-    weight: 5
-    label: inline
+  field_phones:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
     settings:
-      link_to_entity: false
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: string
   field_sample_plain_text:
     weight: 2
     label: inline
@@ -144,7 +156,7 @@ content:
     third_party_settings: {  }
     type: string
   field_sip:
-    weight: 8
+    weight: 9
     label: inline
     settings:
       format: default
@@ -153,7 +165,7 @@ content:
     third_party_settings: {  }
     type: boolean
   field_website:
-    weight: 6
+    weight: 5
     label: inline
     settings:
       trim_length: 80

@@ -1,0 +1,20 @@
+uuid: 34f69e3d-89c8-41f3-89ec-fc2851c31df2
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - mf_submission
+id: submission.field_date_and_
+field_name: field_date_and_
+entity_type: submission
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

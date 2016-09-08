@@ -20,7 +20,7 @@ default_value_callback: ''
 settings:
   file_directory: uploads
   file_extensions: 'txt pdf doc docx'
-  max_filesize: '1 MB'
+  max_filesize: '4 MB'
   description_field: false
   handler: 'default:file'
   handler_settings: {  }

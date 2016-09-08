@@ -1,0 +1,30 @@
+uuid: 06e28cd2-4cdb-42f9-ad22-804041c55f57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_phones
+    - mf_submission.submission_type.sample_fields_form
+    - paragraphs.paragraphs_type.phone_details
+  module:
+    - entity_reference_revisions
+id: submission.sample_fields_form.field_phones
+field_name: field_phones
+entity_type: submission
+bundle: sample_fields_form
+label: Phones
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      phone_details: phone_details
+    target_bundles_drag_drop:
+      phone_details:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

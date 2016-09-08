@@ -1,0 +1,30 @@
+uuid: 276d9542-30ca-4fc0-9451-5790809188c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.phone_details.field_phone
+    - field.field.paragraph.phone_details.field_phone_type
+    - paragraphs.paragraphs_type.phone_details
+  module:
+    - telephone
+id: paragraph.phone_details.default
+targetEntityType: paragraph
+bundle: phone_details
+mode: default
+content:
+  field_phone:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  field_phone_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+hidden:
+  created: true
+  status: true
+  uid: true

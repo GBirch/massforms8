@@ -10,3 +10,7 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'add submission entities'
+  - 'add submissions'
+  - 'edit own submissions'
+  - 'view own submissions'

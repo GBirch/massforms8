@@ -1,18 +1,18 @@
-uuid: e8ab0cd6-6112-4f8f-b15b-0b6b6e55f0ed
+uuid: c8688a81-c369-4419-9d6f-6459734f7853
 langcode: en
 status: true
 dependencies:
   module:
-    - mf_submission
+    - paragraphs
     - telephone
-id: submission.field_phone
+id: paragraph.field_phone
 field_name: field_phone
-entity_type: submission
+entity_type: paragraph
 type: telephone
 settings: {  }
 module: telephone
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

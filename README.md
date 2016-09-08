@@ -25,9 +25,10 @@ Getting Started
 
 Development Notes
 ==============
-1. After every pull, run `composer install` to add/subtract any dependencies. 
-1. After every composer install, run `drush cr`.
+1. After every pull, run `composer install` to add/subtract any dependencies. You must perform this, and other composer operations, from the root directory of the project.
+1. After every composer install, cd into the web directory and run `drush cr`.  Alternatively, if using the DrupalVM, use the @drupalvm.demo.massforms8.gov drush alias instead of @demo.
 1. Install new modules and themes from contrib by adding them to composer.json, either manually or `composer require drupal/module_name "~8.0"`
+1. To remove a module after experimenting, a) `drush @demo pm-uninstall module_name`, THEN b) in the root, `composer remove drupal/module_name` .
 
 Tips
 ==============

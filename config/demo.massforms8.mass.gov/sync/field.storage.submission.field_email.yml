@@ -1,0 +1,18 @@
+uuid: 51335817-35a6-4d5a-b829-0e4b93678793
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_email
+field_name: field_email
+entity_type: submission
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

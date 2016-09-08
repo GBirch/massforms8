@@ -1,0 +1,27 @@
+uuid: fdf23674-d195-4c55-a4ea-78e5c6072252
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_file_upload
+    - mf_submission.submission_type.sample_fields_form
+  module:
+    - file
+id: submission.sample_fields_form.field_file_upload
+field_name: field_file_upload
+entity_type: submission
+bundle: sample_fields_form
+label: 'Private File Upload'
+description: 'Files uploaded through this field will not be available to the public.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: uploads
+  file_extensions: 'txt pdf doc docx'
+  max_filesize: '1 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

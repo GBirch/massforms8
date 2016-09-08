@@ -1,0 +1,23 @@
+uuid: 33f29340-08e7-4890-8252-64d5fd6fa4e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_website
+    - mf_submission.submission_type.sample_fields_form
+  module:
+    - link
+id: submission.sample_fields_form.field_website
+field_name: field_website
+entity_type: submission
+bundle: sample_fields_form
+label: Website
+description: 'Your website address.  This field could also collect a name to present with the web address.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

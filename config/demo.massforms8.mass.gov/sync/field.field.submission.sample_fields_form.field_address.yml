@@ -1,0 +1,39 @@
+uuid: 167e7fb8-069b-42fe-a1ba-ad6b47d543aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_address
+    - mf_submission.submission_type.sample_fields_form
+  module:
+    - address
+id: submission.sample_fields_form.field_address
+field_name: field_address
+entity_type: submission
+bundle: sample_fields_form
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    CA: CA
+    MX: MX
+    PR: PR
+    UM: UM
+    VI: VI
+    US: US
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    dependentLocality: '0'
+    sortingCode: '0'
+    organization: '0'
+    recipient: '0'
+  langcode_override: ''
+field_type: address

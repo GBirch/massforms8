@@ -1,0 +1,19 @@
+uuid: d7b17a18-4f0a-4f8f-8a70-6400da6570e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_email
+    - mf_submission.submission_type.sample_fields_form
+id: submission.sample_fields_form.field_email
+field_name: field_email
+entity_type: submission
+bundle: sample_fields_form
+label: Email
+description: 'Please enter your email address.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

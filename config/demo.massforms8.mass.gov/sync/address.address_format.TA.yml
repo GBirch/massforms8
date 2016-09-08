@@ -1,0 +1,18 @@
+uuid: 8884a32f-b68f-4f35-bdeb-139723c0c231
+langcode: en
+status: true
+dependencies: {  }
+countryCode: TA
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality\n%postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+uppercaseFields:
+  - locality
+administrativeAreaType: null
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: 'TDCU 1ZZ'
+postalCodePrefix: null

@@ -24,7 +24,8 @@
         "drupal/console": "~1.0",
         "drupal/field_group": "~8.0",
         "drupal/state_machine": "~8.0",
-        "drupal/admin_toolbar": "~8.0"
+        "drupal/admin_toolbar": "~8.0",
+        "drupal/address": "~8.0"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -69,5 +70,9 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         }
+    },
+    "config": {
+        "process-timeout": 600,
+        "github-protocols": ["https"]
     }
 }

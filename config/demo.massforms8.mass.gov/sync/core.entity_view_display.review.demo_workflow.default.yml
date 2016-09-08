@@ -6,7 +6,22 @@ dependencies:
     - field.field.review.demo_workflow.field_review_check_complete
     - mf_review.review_type.demo_workflow
   module:
+    - field_group
     - options
+third_party_settings:
+  field_group:
+    group_submission:
+      children:
+        - submission_id
+      parent_name: ''
+      weight: 3
+      label: Submission
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: false
+        classes: ''
+        id: ''
 id: review.demo_workflow.default
 targetEntityType: review
 bundle: demo_workflow
@@ -36,17 +51,11 @@ content:
     third_party_settings: {  }
   submission_id:
     type: entity_reference_entity_view
-    weight: 3
-    label: above
+    weight: 4
+    label: hidden
     settings:
       link: true
       view_mode: default
     third_party_settings: {  }
-  user_id:
-    label: hidden
-    type: entity_reference_label
-    weight: 4
-    settings:
-      link: true
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  user_id: true

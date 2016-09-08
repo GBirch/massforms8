@@ -1,0 +1,21 @@
+uuid: 46f63011-96c2-4b69-8972-4ec2394f24ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_options_select
+    - mf_submission.submission_type.sample_fields_form
+  module:
+    - options
+id: submission.sample_fields_form.field_options_select
+field_name: field_options_select
+entity_type: submission
+bundle: sample_fields_form
+label: 'Options Select'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

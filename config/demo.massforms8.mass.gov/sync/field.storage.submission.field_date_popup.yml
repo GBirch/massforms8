@@ -1,0 +1,20 @@
+uuid: df37428f-cd4f-4d1a-b005-1d966a115933
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - mf_submission
+id: submission.field_date_popup
+field_name: field_date_popup
+entity_type: submission
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

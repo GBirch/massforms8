@@ -44,7 +44,8 @@ function mf_review_submission_update(EntityInterface $entity) {
 function mf_review_submission_save(Submission $submission) {
 
   // If submission does not have an attached review, create one.
-  if ( !$submission->getReviewId() ) {
+  $review = Review::getReviewbySubmissionId($submission->id());
+  if ( !$review ) {
     // @TODO:  Fix this once reviews are tied to form types
     $review_bundle = 'demo_workflow';
     // Create a review of the appropriate type.

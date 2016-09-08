@@ -1,22 +1,35 @@
-add submission entities:
-  title: 'Create new Submission entities'
+add submissions:
+  title: 'Create new Submissions'
 
-administer submission entities:
-  title: 'Administer Submission entities'
-  description: 'Allow to access the administration form to configure Submission entities.'
+administer submissions:
+  title: 'Administer Submissions'
+  description: 'Allow access to the administration form to configure Submissions.'
   restrict access: true
 
-delete submission entities:
-  title: 'Delete Submission entities'
+delete submissions:
+  title: 'Delete Submissions'
 
-edit submission entities:
-  title: 'Edit Submission entities'
+delete own submissions:
+  title: 'Delete own Submissions'
+
+edit submissions:
+  title: 'Edit Submissions'
+
+edit own submissions:
+  title: 'Edit own Submissions'
 
 access submission overview:
-  title: 'Access the Submission overview page'
+  title: 'Access the Submissions overview page'
 
-view published submission entities:
-  title: 'View published Submission entities'
+view published submissions:
+  title: 'View published Submissions'
 
-view unpublished submission entities:
-  title: 'View unpublished Submission entities'
+view own submissions:
+  title: 'View own Submissions'
+
+view unpublished submissions:
+  title: 'View unpublished Submissions'
+
+#
+#permission_callbacks:
+#  - \Drupal\mf_submission\SubmissionPermissions

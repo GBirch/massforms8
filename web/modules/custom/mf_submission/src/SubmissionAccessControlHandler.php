@@ -19,18 +19,45 @@ class SubmissionAccessControlHandler extends EntityAccessControlHandler {
    */
   protected function checkAccess(EntityInterface $entity, $operation, AccountInterface $account) {
     /** @var \Drupal\mf_submission\Entity\SubmissionInterface $entity */
+
+    // Fetch information from the submission object if possible.
+    $status = $entity->isPublished();
+    $uid = $entity->getOwnerId();
+    $user_is_author = ($account->isAuthenticated() && $account->id() == $uid);
+//    $type_id = $entity->getType();
+
+    // Submission permissions are oriented around ownership.
     switch ($operation) {
       case 'view':
-        if (!$entity->isPublished()) {
-          return AccessResult::allowedIfHasPermission($account, 'view unpublished submission entities');
+        if ($user_is_author) {
+          $result = AccessResult::allowedIfHasPermission($account, 'view own submissions');
+          if ($result->isAllowed()) {
+            return $result;
+          }
         }
-        return AccessResult::allowedIfHasPermission($account, 'view published submission entities');
+        // For non-authors, permission depends on published status.
+        if (!$status) {
+          return AccessResult::allowedIfHasPermission($account, 'view unpublished submissions');
+        }
+        return AccessResult::allowedIfHasPermission($account, 'view published submissions');
 
       case 'update':
-        return AccessResult::allowedIfHasPermission($account, 'edit submission entities');
+        if ($user_is_author) {
+          $result = AccessResult::allowedIfHasPermission($account, 'edit own submissions');
+          if ($result->isAllowed()) {
+            return $result;
+          }
+        }
+        return AccessResult::allowedIfHasPermission($account, 'edit submissions');
 
       case 'delete':
-        return AccessResult::allowedIfHasPermission($account, 'delete submission entities');
+        if ($user_is_author) {
+          $result = AccessResult::allowedIfHasPermission($account, 'delete own submissions');
+          if ($result->isAllowed()) {
+            return $result;
+          }
+        }
+        return AccessResult::allowedIfHasPermission($account, 'delete submissions');
     }
 
     // Unknown operation, no opinion.
@@ -41,7 +68,7 @@ class SubmissionAccessControlHandler extends EntityAccessControlHandler {
    * {@inheritdoc}
    */
   protected function checkCreateAccess(AccountInterface $account, array $context, $entity_bundle = NULL) {
-    return AccessResult::allowedIfHasPermission($account, 'add submission entities');
+    return AccessResult::allowedIfHasPermission($account, 'add submissions');
   }
 
 }

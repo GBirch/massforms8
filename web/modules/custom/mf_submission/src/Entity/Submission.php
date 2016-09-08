@@ -9,7 +9,6 @@ use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
-
 /**
  * Defines the Submission entity.
  *
@@ -39,7 +38,7 @@ use Drupal\user\UserInterface;
  *   base_table = "submission",
  *   data_table = "submission_field_data",
  *   translatable = TRUE,
-  *   admin_permission = "administer submission entities",
+ *   admin_permission = "administer submissions",
  *   entity_keys = {
  *     "id" = "id",
  *     "bundle" = "type",
@@ -50,11 +49,11 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/submission/{submission}",
- *     "add-page" = "/admin/structure/submission/add",
- *     "add-form" = "/admin/structure/submission/add/{submission_type}",
- *     "edit-form" = "/admin/structure/submission/{submission}/edit",
- *     "delete-form" = "/admin/structure/submission/{submission}/delete",
+ *     "canonical" = "/submission/{submission}",
+ *     "add-page" = "/submission/add",
+ *     "add-form" = "/submission/add/{submission_type}",
+ *     "edit-form" = "/submission/{submission}/edit",
+ *     "delete-form" = "/submission/{submission}/delete",
  *     "collection" = "/admin/structure/submission",
  *   },
  *   bundle_entity_type = "submission_type",
@@ -126,11 +125,9 @@ class Submission extends ContentEntityBase implements SubmissionInterface {
    * {@inheritdoc}
    */
   public function getReviewId() {
-    $review_ids = \Drupal::entityQuery('review')
-      ->condition('submission_id', $this->id())
-      ->execute();
-    if ( !empty($review_ids) ) {
-      return current($review_ids);
+    // The review module is not a dependency of this module.
+    if (class_exists('\Drupal\mf_review\Entity\Review')) {
+      return \Drupal\mf_review\Entity\Review::getReviewbySubmissionId($this->id());
     }
     return NULL;
   }

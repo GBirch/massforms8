@@ -1,0 +1,21 @@
+uuid: cb34f613-bb7d-4566-b39f-21e9e8344e05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_review_notes
+    - mf_review.review_type.demo_workflow
+  module:
+    - text
+id: review.demo_workflow.field_review_notes
+field_name: field_review_notes
+entity_type: review
+bundle: demo_workflow
+label: 'Review Notes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

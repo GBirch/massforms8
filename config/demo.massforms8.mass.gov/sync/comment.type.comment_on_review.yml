@@ -1,0 +1,8 @@
+uuid: 73815a0d-088b-4d36-a4b3-fb6f7d689c1a
+langcode: en
+status: true
+dependencies: {  }
+id: comment_on_review
+label: 'Comment on Review'
+target_entity_type_id: review
+description: ''

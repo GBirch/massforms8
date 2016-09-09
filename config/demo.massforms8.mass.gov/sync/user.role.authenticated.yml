@@ -15,3 +15,4 @@ permissions:
   - 'add submissions'
   - 'edit own submissions'
   - 'view own submissions'
+  - 'use text format restricted_html'

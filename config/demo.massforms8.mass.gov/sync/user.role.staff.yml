@@ -26,3 +26,5 @@ permissions:
   - 'edit own basic_page content'
   - 'revert basic_page revisions'
   - 'view basic_page revisions'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'

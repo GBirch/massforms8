@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.review.demo_workflow.field_review_check_complete
+    - field.field.review.demo_workflow.field_completeness_review
+    - field.field.review.demo_workflow.field_review_notes
     - mf_review.review_type.demo_workflow
   module:
     - field_group
     - options
+    - text
 third_party_settings:
   field_group:
     group_submission:
@@ -27,15 +29,18 @@ targetEntityType: review
 bundle: demo_workflow
 mode: default
 content:
-  field_review_check_complete:
-    weight: 2
-    label: inline
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+  field_completeness_review:
+    weight: 5
+    label: above
+    settings: {  }
     third_party_settings: {  }
-    type: boolean
+    type: list_default
+  field_review_notes:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
   name:
     label: visually_hidden
     type: string

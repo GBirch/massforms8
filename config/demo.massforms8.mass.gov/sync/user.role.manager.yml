@@ -15,3 +15,6 @@ permissions:
   - 'access site reports'
   - 'administer users'
   - 'access user profiles'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'use text format full_html'

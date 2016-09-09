@@ -3,19 +3,83 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.review.demo_workflow.field_review_check_complete
+    - field.field.review.demo_workflow.field_completeness_review
+    - field.field.review.demo_workflow.field_review_notes
     - mf_review.review_type.demo_workflow
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_complete:
+      children:
+        - field_completeness_review
+      parent_name: group_review_process
+      weight: 3
+      label: 'Review for Completeness'
+      format_type: tab
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+    group_notes:
+      children:
+        - field_review_notes
+      parent_name: group_review_process
+      weight: 4
+      label: Notes
+      format_type: tab
+      format_settings:
+        label: Notes
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+        required_fields: false
+    group_submission:
+      children:
+        - submission_id
+      parent_name: ''
+      weight: 5
+      label: Submission
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_review_process:
+      children:
+        - group_complete
+        - group_notes
+      parent_name: ''
+      weight: 2
+      label: 'Review Process'
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
 id: review.demo_workflow.default
 targetEntityType: review
 bundle: demo_workflow
 mode: default
 content:
-  field_review_check_complete:
-    weight: 1
-    settings:
-      display_label: true
+  field_completeness_review:
+    weight: 4
+    settings: {  }
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: options_buttons
+  field_review_notes:
+    weight: 4
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
   name:
     type: string_textfield
     weight: 0
@@ -25,13 +89,16 @@ content:
     third_party_settings: {  }
   review_stage:
     type: options_select
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
   submission_id:
-    type: options_select
-    weight: 3
-    settings: {  }
+    type: entity_reference_autocomplete
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 80
+      placeholder: ''
     third_party_settings: {  }
 hidden:
   user_id: true

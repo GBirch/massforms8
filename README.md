@@ -23,6 +23,13 @@ Getting Started
     1. `../vendor/bin/drush @demo runserver`. This uses PHP's built-in web server. 
 1. If you have not created an easy password for the root user, get a login link for the root user, `drush @demo uli --no-browser` and open the link in a browser to log in.
 
+Acquia Cloud
+==============
+1. To launch a new multisite, create a new database whose name matches the first section of the domain name.
+1. Install the new multisite via drush site-install on Cloud.
+1. Add a remote for the Acquia Git repo and push there as needed.
+1. Then run [Acquia Pipelines](https://docs.acquia.com/pipelines) to build the codebase. Then deploy it as usual.
+
 Development Notes
 ==============
 1. After every pull, run `composer install` to add/subtract any dependencies. 
@@ -33,4 +40,3 @@ Tips
 ==============
 1. `drush use @demo` is a good way to avoid having to type an alias over and over. In order to see what 'site' you have _used_, run `drush init`.
 1. To use the drupal console with a multisite install, you must pass the --uri= parameter.  E.g.: `drupal --uri=demo.massforms8.mass.gov state:debug`
-1. If using Windows, not using a bash shell and already have drush and drupal console working to your liking, you MAY want to rename /vendor/bin to /vendor/bin-DISABLED so that you can use your local setup.  If so, you will need to rename vendor/bin after every composer install or update.

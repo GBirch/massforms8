@@ -53,3 +53,7 @@
  * @see \Drupal\Core\DrupalKernel::getSitePath()
  * @see https://www.drupal.org/documentation/install/multi-site
  */
+
+
+// Map free tier Acquia domain to a production URL so Drupal works happily.
+$sites['mf8ryjdnclyfu.devcloud.acquia-sites.com'] = 'demo.massforms8.mass.gov';

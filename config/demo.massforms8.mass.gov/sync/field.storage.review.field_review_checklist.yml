@@ -1,0 +1,36 @@
+uuid: 1cfd5fd9-730e-44b3-b122-048ba306d493
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_review
+    - options
+id: review.field_review_checklist
+field_name: field_review_checklist
+entity_type: review
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: timely
+      label: 'Submission made within time limit'
+    -
+      value: signature
+      label: 'Signature received'
+    -
+      value: qualifies
+      label: 'Applicant qualifies for approval'
+    -
+      value: available
+      label: 'Requested resource is available'
+    -
+      value: reserved
+      label: 'Requested resource has been reserved'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

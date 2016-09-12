@@ -277,6 +277,9 @@ class Review extends ContentEntityBase implements ReviewInterface {
     return $fields;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public static function bundleFieldDefinitions(EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
     $review_type = ReviewType::load($bundle);
     if ($review_type) {
@@ -286,6 +289,20 @@ class Review extends ContentEntityBase implements ReviewInterface {
       return $fields;
     }
     return array();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function getReviewbySubmissionId($submission_id) {
+    // At initial install, there may be no review table yet.
+    $review_ids = \Drupal::entityQuery('review')
+      ->condition('submission_id', $submission_id)
+      ->execute();
+    if (!empty($review_ids)) {
+      return self::load(current($review_ids));
+    }
+    return NULL;
   }
 
 }

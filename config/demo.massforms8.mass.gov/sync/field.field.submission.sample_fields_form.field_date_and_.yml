@@ -1,0 +1,21 @@
+uuid: 3f00a459-3027-48c1-8eb7-af0b90af3ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_date_and_
+    - mf_submission.submission_type.sample_fields_form
+  module:
+    - datetime
+id: submission.sample_fields_form.field_date_and_
+field_name: field_date_and_
+entity_type: submission
+bundle: sample_fields_form
+label: 'Date and Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

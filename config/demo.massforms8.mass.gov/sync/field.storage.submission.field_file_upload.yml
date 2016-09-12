@@ -1,0 +1,23 @@
+uuid: 9d54a7d3-374b-40f0-8686-3dc0ac2937ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - mf_submission
+id: submission.field_file_upload
+field_name: field_file_upload
+entity_type: submission
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: private
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

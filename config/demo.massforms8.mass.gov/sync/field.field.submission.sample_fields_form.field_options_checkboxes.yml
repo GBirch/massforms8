@@ -1,0 +1,21 @@
+uuid: 689640a4-8b0d-4713-956d-0477e919eedb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_options_checkboxes
+    - mf_submission.submission_type.sample_fields_form
+  module:
+    - options
+id: submission.sample_fields_form.field_options_checkboxes
+field_name: field_options_checkboxes
+entity_type: submission
+bundle: sample_fields_form
+label: 'Options Checkboxes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

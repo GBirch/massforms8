@@ -1,0 +1,24 @@
+uuid: 470ba3c1-9321-4e0d-8cd6-9805b4e362dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_date_popup
+    - mf_submission.submission_type.sample_fields_form
+  module:
+    - datetime
+id: submission.sample_fields_form.field_date_popup
+field_name: field_date_popup
+entity_type: submission
+bundle: sample_fields_form
+label: 'Date Popup'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

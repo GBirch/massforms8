@@ -1,0 +1,18 @@
+uuid: 45722fe6-5ac6-42be-b553-1187da0f2f39
+langcode: en
+status: true
+dependencies: {  }
+countryCode: PH
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%dependentLocality, %locality\n%postalCode %administrativeArea"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+uppercaseFields:
+  - locality
+administrativeAreaType: province
+localityType: city
+dependentLocalityType: suburb
+postalCodeType: postal
+postalCodePattern: '\d{4}'
+postalCodePrefix: null

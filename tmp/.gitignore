@@ -1,0 +1,5 @@
+# The tmp directory is needed for local development, but its contents are not.
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore

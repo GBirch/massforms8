@@ -1,12 +1,17 @@
 module:
+  address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
   block: 0
   breakpoint: 0
+  ckeditor: 0
+  comment: 0
   config: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
+  editor: 0
+  entity_reference_revisions: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -22,6 +27,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs: 0
   state_machine: 0
   system: 0
   telephone: 0

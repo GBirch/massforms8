@@ -1,0 +1,20 @@
+uuid: 5605eb2f-c16e-475d-9ab9-ef889661eb77
+langcode: en
+status: true
+dependencies: {  }
+id: manager
+label: Manager
+weight: 3
+is_admin: null
+permissions:
+  - 'administer address formats'
+  - 'create basic_page content'
+  - 'delete any basic_page content'
+  - 'delete own basic_page content'
+  - 'delete basic_page revisions'
+  - 'access site reports'
+  - 'administer users'
+  - 'access user profiles'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'use text format full_html'

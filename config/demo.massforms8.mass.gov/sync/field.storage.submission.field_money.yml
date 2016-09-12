@@ -1,0 +1,20 @@
+uuid: cf5ed505-93ed-4791-bdfc-7152303c0c53
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_money
+field_name: field_money
+entity_type: submission
+type: decimal
+settings:
+  precision: 12
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

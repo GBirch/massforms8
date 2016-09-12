@@ -1,0 +1,23 @@
+uuid: 72e674eb-2a32-4d81-b3ce-e076ea8e644e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_sip
+    - mf_submission.submission_type.sample_fields_form
+id: submission.sample_fields_form.field_sip
+field_name: field_sip
+entity_type: submission
+bundle: sample_fields_form
+label: 'Simple Checkbox'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

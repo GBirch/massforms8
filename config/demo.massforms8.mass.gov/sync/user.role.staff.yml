@@ -1,0 +1,30 @@
+uuid: 474884e7-1470-464d-a403-d9c5b8477753
+langcode: en
+status: true
+dependencies: {  }
+id: staff
+label: Staff
+weight: 2
+is_admin: null
+permissions:
+  - 'access files overview'
+  - 'access review overview'
+  - 'administer review entities'
+  - 'edit review entities'
+  - 'view published review entities'
+  - 'view unpublished review entities'
+  - 'access submission overview'
+  - 'administer submission entities'
+  - 'add submission entities'
+  - 'delete submission entities'
+  - 'edit submission entities'
+  - 'view published submission entities'
+  - 'view unpublished submission entities'
+  - 'administer nodes'
+  - 'view all revisions'
+  - 'edit any basic_page content'
+  - 'edit own basic_page content'
+  - 'revert basic_page revisions'
+  - 'view basic_page revisions'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'

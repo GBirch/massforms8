@@ -1,0 +1,23 @@
+uuid: 2fe224a7-478b-4f49-bb24-7b8924e1ff56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_completeness_review
+    - mf_review.review_type.demo_workflow
+  module:
+    - options
+id: review.demo_workflow.field_completeness_review
+field_name: field_completeness_review
+entity_type: review
+bundle: demo_workflow
+label: 'Completeness Review'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: pending
+default_value_callback: ''
+settings: {  }
+field_type: list_string

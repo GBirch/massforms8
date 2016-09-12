@@ -1,0 +1,19 @@
+uuid: 90a4580b-972e-4516-a7bf-f9665cea469b
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_review
+    - text
+id: review.field_review_notes
+field_name: field_review_notes
+entity_type: review
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

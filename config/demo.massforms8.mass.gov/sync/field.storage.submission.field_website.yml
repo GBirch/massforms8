@@ -1,0 +1,19 @@
+uuid: 8915a421-209a-4e0f-a147-716f69c2e402
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - mf_submission
+id: submission.field_website
+field_name: field_website
+entity_type: submission
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

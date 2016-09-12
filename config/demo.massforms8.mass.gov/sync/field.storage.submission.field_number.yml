@@ -1,0 +1,20 @@
+uuid: e8221a05-64ad-4a62-9826-8ec98dcd35da
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_number
+field_name: field_number
+entity_type: submission
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

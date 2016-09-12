@@ -1,15 +1,17 @@
-uuid: 37d5e241-7c9b-40a7-ae62-0b85a6db1650
+uuid: 4ad68871-c54e-410d-99bf-20994989cb7a
 langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - mf_review
-id: review.field_review_check_complete
-field_name: field_review_check_complete
+id: review.field_review_scheduled_for
+field_name: field_review_scheduled_for
 entity_type: review
-type: boolean
-settings: {  }
-module: core
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

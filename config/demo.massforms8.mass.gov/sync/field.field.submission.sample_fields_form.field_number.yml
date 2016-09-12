@@ -1,0 +1,23 @@
+uuid: 1a2f537f-c4fe-433e-b02f-846d38a0abf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_number
+    - mf_submission.submission_type.sample_fields_form
+id: submission.sample_fields_form.field_number
+field_name: field_number
+entity_type: submission
+bundle: sample_fields_form
+label: Number
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: thing|things
+field_type: integer

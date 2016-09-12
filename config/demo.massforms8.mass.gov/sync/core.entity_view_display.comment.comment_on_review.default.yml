@@ -1,0 +1,23 @@
+uuid: c31777ea-9be0-4b53-a802-686395786765
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_on_review
+    - field.field.comment.comment_on_review.comment_body
+  module:
+    - text
+id: comment.comment_on_review.default
+targetEntityType: comment
+bundle: comment_on_review
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden: {  }

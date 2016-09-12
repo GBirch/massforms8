@@ -1,0 +1,6 @@
+uuid: 61ceb2e4-715b-4b81-9235-cc70db29664f
+langcode: en
+status: true
+dependencies: {  }
+id: phone_details
+label: 'Phone Details'

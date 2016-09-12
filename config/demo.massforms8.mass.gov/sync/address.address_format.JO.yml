@@ -1,0 +1,18 @@
+uuid: cb4fe01b-5b96-43ca-b501-be63c9d7e729
+langcode: en
+status: true
+dependencies: {  }
+countryCode: JO
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality %postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+uppercaseFields:
+  - locality
+administrativeAreaType: null
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: '\d{5}'
+postalCodePrefix: null

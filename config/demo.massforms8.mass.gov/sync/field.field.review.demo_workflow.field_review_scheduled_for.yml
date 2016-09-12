@@ -1,0 +1,21 @@
+uuid: 9b18f967-1aea-44ce-a639-8dd860750c6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_review_scheduled_for
+    - mf_review.review_type.demo_workflow
+  module:
+    - datetime
+id: review.demo_workflow.field_review_scheduled_for
+field_name: field_review_scheduled_for
+entity_type: review
+bundle: demo_workflow
+label: 'Review Scheduled For'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

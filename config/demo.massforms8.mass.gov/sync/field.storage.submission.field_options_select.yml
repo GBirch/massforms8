@@ -1,0 +1,30 @@
+uuid: e9eb7de8-98e6-4066-911f-3e76d63fde68
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_options_select
+field_name: field_options_select
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: a
+      label: 'Option A'
+    -
+      value: b
+      label: 'Option B'
+    -
+      value: c
+      label: 'Option C'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

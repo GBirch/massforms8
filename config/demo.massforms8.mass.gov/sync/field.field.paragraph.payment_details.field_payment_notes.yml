@@ -1,0 +1,19 @@
+uuid: 297be353-6116-46bc-bc69-71f93c6273a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_payment_notes
+    - paragraphs.paragraphs_type.payment_details
+id: paragraph.payment_details.field_payment_notes
+field_name: field_payment_notes
+entity_type: paragraph
+bundle: payment_details
+label: Details
+description: 'Form of payment and/or other identifying detail.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

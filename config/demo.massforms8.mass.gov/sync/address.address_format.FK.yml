@@ -1,0 +1,20 @@
+uuid: 2c41be5f-fb23-4ce6-8491-74e79b0b2945
+langcode: en
+status: true
+dependencies: {  }
+countryCode: FK
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%locality\n%postalCode"
+requiredFields:
+  - recipient
+  - addressLine1
+  - locality
+  - postalCode
+uppercaseFields:
+  - locality
+  - postalCode
+administrativeAreaType: null
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: 'FIQQ 1ZZ'
+postalCodePrefix: null

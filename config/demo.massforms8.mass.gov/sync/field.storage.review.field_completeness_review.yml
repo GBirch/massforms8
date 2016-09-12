@@ -1,0 +1,30 @@
+uuid: ebad6d2d-8f0b-4db7-9eda-ae4f2faa21a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_review
+    - options
+id: review.field_completeness_review
+field_name: field_completeness_review
+entity_type: review
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: pending
+      label: Pending
+    -
+      value: passed
+      label: Passed
+    -
+      value: failed
+      label: Failed
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

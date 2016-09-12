@@ -1,0 +1,18 @@
+uuid: 50bf2d5b-9c0d-41fe-b032-0942bba753d4
+langcode: en
+status: true
+dependencies: {  }
+countryCode: SM
+format: "%recipient\n%organization\n%addressLine1\n%addressLine2\n%postalCode %locality"
+requiredFields:
+  - recipient
+  - addressLine1
+  - postalCode
+uppercaseFields:
+  - locality
+administrativeAreaType: null
+localityType: city
+dependentLocalityType: null
+postalCodeType: postal
+postalCodePattern: 4789\d
+postalCodePrefix: null

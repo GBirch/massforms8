@@ -716,17 +716,6 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 require __DIR__ . '/../settings.shared.php';
 
-$databases['default']['default'] = array (
-  'database' => 'demo_massforms8_mass_gov',
-  'username' => 'massforms8',
-  'password' => '',
-  'prefix' => '',
-  'host' => 'localhost',
-//  'port' => '33067',
-  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-  'driver' => 'mysql',
-);
-
 if (file_exists(__DIR__ . '/settings.local.php')) {
   include __DIR__ . '/settings.local.php';
 }

@@ -1,6 +1,6 @@
 <?php
 
-$root['root'] = dirname(__DIR__). '/web';
+$root['root'] = dirname(__DIR__). '/docroot';
 
 $aliases['demo'] = $root + array(
   'uri' => 'http://demo.massforms8.mass.gov/',

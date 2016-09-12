@@ -26,7 +26,7 @@ Getting Started
 Acquia Cloud
 ==============
 1. To launch a new multisite, create a new database whose name matches the first section of the domain name.
-1. Install the new multisite via drush site-install on Cloud.
+1. Install the new multisite - `drush @mf8.dev si minimal --config-dir=../config/demo.massforms8.mass.gov/sync -v`
 1. Add a remote for the Acquia Git repo and push there as needed.
 1. Then run [Acquia Pipelines](https://docs.acquia.com/pipelines) to build the codebase. Then deploy it as usual.
 

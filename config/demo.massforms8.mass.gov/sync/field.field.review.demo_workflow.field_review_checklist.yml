@@ -1,0 +1,21 @@
+uuid: 0fdc26c7-3141-406d-b7ee-88e03aa5a0b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_review_checklist
+    - mf_review.review_type.demo_workflow
+  module:
+    - options
+id: review.demo_workflow.field_review_checklist
+field_name: field_review_checklist
+entity_type: review
+bundle: demo_workflow
+label: 'Review Checklist'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

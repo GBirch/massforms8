@@ -4,10 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.review.demo_workflow.field_completeness_review
+    - field.field.review.demo_workflow.field_review_checklist
     - field.field.review.demo_workflow.field_review_notes
+    - field.field.review.demo_workflow.field_review_scheduled_for
+    - field.field.review.demo_workflow.field_reviewer_name
+    - field.field.review.demo_workflow.field_submission_payment
     - mf_review.review_type.demo_workflow
   module:
+    - datetime
     - field_group
+    - paragraphs
     - text
 third_party_settings:
   field_group:
@@ -29,7 +35,7 @@ third_party_settings:
       children:
         - field_review_notes
       parent_name: group_review_process
-      weight: 4
+      weight: 6
       label: Notes
       format_type: tab
       format_settings:
@@ -44,16 +50,19 @@ third_party_settings:
         - submission_id
       parent_name: ''
       weight: 5
-      label: Submission
+      label: 'Submission under Review'
       format_type: details
       format_settings:
-        open: false
-        required_fields: true
-        classes: ''
+        label: 'Submission under Review'
         id: ''
+        classes: ''
+        open: false
+        required_fields: false
     group_review_process:
       children:
         - group_complete
+        - group_schedule
+        - group_review
         - group_notes
       parent_name: ''
       weight: 2
@@ -61,6 +70,33 @@ third_party_settings:
       format_type: tabs
       format_settings:
         direction: vertical
+        classes: ''
+        id: ''
+    group_schedule:
+      children:
+        - field_review_scheduled_for
+        - field_reviewer_name
+      parent_name: group_review_process
+      weight: 4
+      label: 'Schedule Review'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_review:
+      children:
+        - field_review_checklist
+        - field_submission_payment
+      parent_name: group_review_process
+      weight: 5
+      label: Review
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
         classes: ''
         id: ''
 id: review.demo_workflow.default
@@ -73,6 +109,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
+  field_review_checklist:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
   field_review_notes:
     weight: 4
     settings:
@@ -80,6 +121,28 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+  field_review_scheduled_for:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_reviewer_name:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_submission_payment:
+    type: entity_reference_paragraphs
+    weight: 12
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0

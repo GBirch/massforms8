@@ -1,0 +1,21 @@
+uuid: 10a2b524-5899-4cec-b7a9-139b7b1a188d
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_review
+id: review.field_reviewer_name
+field_name: field_reviewer_name
+entity_type: review
+type: string
+settings:
+  max_length: 127
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

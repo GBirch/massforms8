@@ -1,0 +1,38 @@
+uuid: 3d59d116-d3c6-4a73-b04f-79bb3fb2fa7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.payment_details.field_payment_amount
+    - field.field.paragraph.payment_details.field_payment_notes
+    - field.field.paragraph.payment_details.field_payment_received
+    - paragraphs.paragraphs_type.payment_details
+  module:
+    - datetime
+id: paragraph.payment_details.default
+targetEntityType: paragraph
+bundle: payment_details
+mode: default
+content:
+  field_payment_amount:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_payment_notes:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_payment_received:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+hidden:
+  created: true
+  status: true
+  uid: true

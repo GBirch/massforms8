@@ -1,0 +1,6 @@
+uuid: 571eb706-18d0-4782-866b-28e4f10ff8ee
+langcode: en
+status: true
+dependencies: {  }
+id: payment_details
+label: 'Payment Details'

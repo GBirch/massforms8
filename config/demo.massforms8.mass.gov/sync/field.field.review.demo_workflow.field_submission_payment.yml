@@ -1,0 +1,31 @@
+uuid: f276c160-f632-466e-b67a-5afd2f945d45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.review.field_submission_payment
+    - mf_review.review_type.demo_workflow
+  module:
+    - entity_reference_revisions
+id: review.demo_workflow.field_submission_payment
+field_name: field_submission_payment
+entity_type: review
+bundle: demo_workflow
+label: 'Payment Received'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    target_bundles_drag_drop:
+      payment_details:
+        weight: 3
+        enabled: false
+      phone_details:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

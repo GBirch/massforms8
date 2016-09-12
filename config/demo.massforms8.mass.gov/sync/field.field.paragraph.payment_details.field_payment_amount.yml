@@ -1,0 +1,23 @@
+uuid: f66b23d4-ebf9-446c-9559-d16eab1d98cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_payment_amount
+    - paragraphs.paragraphs_type.payment_details
+id: paragraph.payment_details.field_payment_amount
+field_name: field_payment_amount
+entity_type: paragraph
+bundle: payment_details
+label: Amount
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

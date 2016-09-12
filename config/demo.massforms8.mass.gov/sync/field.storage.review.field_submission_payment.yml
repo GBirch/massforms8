@@ -1,0 +1,21 @@
+uuid: b03b9934-d5a2-466a-a278-ba71405b5930
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - mf_review
+    - paragraphs
+id: review.field_submission_payment
+field_name: field_submission_payment
+entity_type: review
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

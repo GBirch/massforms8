@@ -1,0 +1,20 @@
+uuid: 4ad68871-c54e-410d-99bf-20994989cb7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - mf_review
+id: review.field_review_scheduled_for
+field_name: field_review_scheduled_for
+entity_type: review
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

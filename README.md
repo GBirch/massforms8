@@ -23,12 +23,17 @@ Getting Started
     1. `../vendor/bin/drush @demo runserver`. This uses PHP's built-in web server.
 1. If you have not created an easy password for the root user, get a login link for the root user, `drush @demo uli --no-browser` and open the link in a browser to log in.
 
-Acquia Cloud
+Acquia Cloud - Deployment
+==============
+1. Add a remote for the Acquia Git repo (if needed) and push to Acquia.
+1. Then run [Acquia Pipelines](https://docs.acquia.com/pipelines) to build the codebase - . 
+1. Deploy the pipelines-build-* branch as usual.
+1. Install the new multisite, (from local machine) `drush @mf8.dev si minimal --config-dir=../config/demo.massforms8.mass.gov/sync -v`
+
+Acquia Cloud - New Site
 ==============
 1. To launch a new multisite, create a new database whose name matches the first section of the domain name.
-1. Install the new multisite - `drush @mf8.dev si minimal --config-dir=../config/demo.massforms8.mass.gov/sync -v`
-1. Add a remote for the Acquia Git repo and push there as needed.
-1. Then run [Acquia Pipelines](https://docs.acquia.com/pipelines) to build the codebase. Then deploy it as usual.
+1. Run site-install per above using new value for --config-dir.
 
 Development Notes
 ==============
@@ -36,8 +41,5 @@ Development Notes
 1. After every composer install, cd into the web directory and run `drush cr`.  Alternatively, if using the DrupalVM, use the @drupalvm.demo.massforms8.gov drush alias instead of @demo.
 1. Install new modules and themes from contrib by adding them to composer.json, either manually or `composer require drupal/module_name "~8.0"`
 1. To remove a module after experimenting, a) `drush @demo pm-uninstall module_name`, THEN b) in the root, `composer remove drupal/module_name` .
-
-Tips
-==============
 1. `drush use @demo` is a good way to avoid having to type an alias over and over. In order to see what 'site' you have _used_, run `drush init`.
 1. To use the drupal console with a multisite install, you must pass the --uri= parameter.  E.g.: `drupal --uri=demo.massforms8.mass.gov state:debug`

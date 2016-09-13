@@ -24,3 +24,7 @@ else {
   );
 }
 
+if (file_exists(__DIR__ . '/settings.shared.local.php')) {
+  include __DIR__ . '/settings.shared.local.php';
+}
+

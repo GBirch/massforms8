@@ -8,6 +8,7 @@ docroot/profiles/contrib
 
 # Ignore local settings files (e.g. for DevDesktop or MAMP).
 docroot/sites/*/settings.local.php
+docroot/sites/settings.shared.local.php
 
 # Ignore local files-private
 files-private
@@ -35,5 +36,6 @@ Thumbs.db
 
 # Ignore log files at the top of the project and in the web directory.
 *.log
-web/*.log
-/docroot/sites/settings.shared.local.php
+
+# Ignore any remnants of old installation under web
+web/

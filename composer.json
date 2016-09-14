@@ -26,7 +26,9 @@
         "drupal/state_machine": "~8.0",
         "drupal/admin_toolbar": "~8.0",
         "drupal/address": "~8.0",
-        "drupal/paragraphs": "~8.1"
+        "drupal/paragraphs": "~8.1",
+        "drupal/features": "~8.3",
+        "drupal/markup": "8.1.x-dev"
     },
     "require-dev": {
         "behat/mink": "~1.7",

@@ -1,8 +1,8 @@
 <?php
 
-$domain = basename($site_path);
+$domain = str_replace('.dd','', basename($site_path));
 $settings['install_profile'] = 'minimal';
-$config_directories['sync'] = '../config/'. str_replace('.dd','', $domain) . '/sync';
+$config_directories['sync'] = '../config/'. $domain . '/sync';
 
 
 // Assumes database names correspond to first section of $site_path.
@@ -22,6 +22,7 @@ else {
     'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
     'driver' => 'mysql',
   );
+  $settings['file_private_path'] = '../files-private/' . $domain;
 }
 
 if (file_exists(__DIR__ . '/settings.shared.local.php')) {

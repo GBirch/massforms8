@@ -23,12 +23,23 @@ Getting Started
     1. `../vendor/bin/drush @demo runserver`. This uses PHP's built-in web server.
 1. If you have not created an easy password for the root user, get a login link for the root user, `drush @demo uli --no-browser` and open the link in a browser to log in.
 
-Acquia Cloud - Deployment
+Acquia Cloud - Setup
 ==============
 1. Add a remote for the Acquia Git repo (if needed) and push to Acquia.
-1. Then run [Acquia Pipelines](https://docs.acquia.com/pipelines) to build the codebase - . 
-1. Deploy the pipelines-build-* branch as usual.
-1. Install the new multisite, (from local machine) `drush @mf8.dev si minimal --config-dir=../config/demo.massforms8.mass.gov/sync -v`
+1. Install Acquia Pipelines (if on Windows, you will need a newish version of Acquia Dev Desktop) and configure (authentication).  [Acquia Pipelines](https://docs.acquia.com/pipelines)
+1. Find the application id for the site. `pipelines list-applications`
+
+Acquia Cloud - Build
+==============
+1. Push the relevant branch, usually dev, to Acquia.
+1. `pipelines --application-id=XXXX start`. If run from within your Git repo, this will automatically detect the branch to build.  Otherwise you need to specify --vcs-path=[Git branch or tag]
+1. This creates a new "pipelines-build-*" branch.
+
+Acquia Cloud - Deployment
+==============
+1. If this is a first time install, or you want to delete all of the content, then (from local machine) `drush @mf8.dev si minimal --config-dir=../config/demo.massforms8.mass.gov/sync -v`
+1. If you are simply updating, then `drush @mf8.dev config-import` or whatever other deployment steps need to be taken.
+1. Note that using the @mf8.dev alias will require use of your ssh key, so running the commands above from within a VM will normally not work.
 
 Acquia Cloud - New Site
 ==============

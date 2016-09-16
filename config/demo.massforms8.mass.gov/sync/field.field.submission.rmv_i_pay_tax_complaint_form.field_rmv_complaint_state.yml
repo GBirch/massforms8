@@ -1,0 +1,34 @@
+uuid: 96f146d0-ae3c-4b73-b815-e29a70382986
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_complaint_state
+    - mf_submission.submission_type.rmv_i_pay_tax_complaint_form
+  module:
+    - address
+id: submission.rmv_i_pay_tax_complaint_form.field_rmv_complaint_state
+field_name: field_rmv_complaint_state
+entity_type: submission
+bundle: rmv_i_pay_tax_complaint_form
+label: State
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  fields:
+    administrativeArea: administrativeArea
+    locality: '0'
+    dependentLocality: '0'
+    postalCode: '0'
+    sortingCode: '0'
+    addressLine1: '0'
+    addressLine2: '0'
+    organization: '0'
+    recipient: '0'
+  langcode_override: ''
+field_type: address

@@ -1,0 +1,20 @@
+uuid: 54ab1a11-a8b7-4a77-9ade-227c72d1b0c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_rmv_vehicle_year
+field_name: field_rmv_vehicle_year
+entity_type: submission
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

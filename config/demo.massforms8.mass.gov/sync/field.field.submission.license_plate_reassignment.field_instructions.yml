@@ -1,0 +1,25 @@
+uuid: 2c00a5c0-73e0-48eb-a017-4371232902ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_instructions
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - markup
+id: submission.license_plate_reassignment.field_instructions
+field_name: field_instructions
+entity_type: submission
+bundle: license_plate_reassignment
+label: Instructions
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>A license plate reassignment is done when a customer leases a vehicle and wishes to retain possession of his or her current plate. In this case, the plate would be reassigned to the leasing company. A plate can also be reassigned from a leasing company to an individual, or from one leasing company to another. A reassignment can only be done for a newly purchased or leased vehicle, and an RMV-1 form must be used. A plate can only be reassigned when a lease is involved.</p>\r\n\r\n<p><strong>Please see reverse side for instructions. Fax completed form to 857-368-0819.</strong></p>\r\n"
+    format: basic_html
+field_type: markup

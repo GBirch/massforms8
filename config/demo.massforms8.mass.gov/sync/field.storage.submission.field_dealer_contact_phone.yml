@@ -1,0 +1,19 @@
+uuid: 286c2f36-1acb-4cec-9208-cc337b593836
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - telephone
+id: submission.field_dealer_contact_phone
+field_name: field_dealer_contact_phone
+entity_type: submission
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

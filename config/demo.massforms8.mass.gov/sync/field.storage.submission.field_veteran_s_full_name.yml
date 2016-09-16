@@ -1,0 +1,21 @@
+uuid: 3425c525-ba12-4c45-8d7f-9364276bff0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_veteran_s_full_name
+field_name: field_veteran_s_full_name
+entity_type: submission
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

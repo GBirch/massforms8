@@ -1,0 +1,21 @@
+uuid: 1d0f0bf8-cd66-446a-a854-bc379683281f
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_rmv_vin
+field_name: field_rmv_vin
+entity_type: submission
+type: string
+settings:
+  max_length: 17
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

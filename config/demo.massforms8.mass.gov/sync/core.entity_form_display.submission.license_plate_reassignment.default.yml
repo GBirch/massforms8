@@ -1,0 +1,180 @@
+uuid: 88ea2bd2-dbb6-45fe-9f55-77bc87d99f2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.license_plate_reassignment.field_date_of_signature
+    - field.field.submission.license_plate_reassignment.field_dealer_contact_person
+    - field.field.submission.license_plate_reassignment.field_dealer_contact_phone
+    - field.field.submission.license_plate_reassignment.field_dealer_name
+    - field.field.submission.license_plate_reassignment.field_instruction_details
+    - field.field.submission.license_plate_reassignment.field_instructions
+    - field.field.submission.license_plate_reassignment.field_plate_number
+    - field.field.submission.license_plate_reassignment.field_plate_type
+    - field.field.submission.license_plate_reassignment.field_plate_types
+    - field.field.submission.license_plate_reassignment.field_transferee_fid_or_license_
+    - field.field.submission.license_plate_reassignment.field_transferee_mailing_address
+    - field.field.submission.license_plate_reassignment.field_transferee_name
+    - field.field.submission.license_plate_reassignment.field_transferer_fid_or_license_
+    - field.field.submission.license_plate_reassignment.field_transferer_mailing_address
+    - field.field.submission.license_plate_reassignment.field_transferer_name
+    - field.field.submission.license_plate_reassignment.field_transferer_signature
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - address
+    - datetime
+    - field_group
+    - markup
+    - telephone
+third_party_settings:
+  field_group:
+    group_evr_dealership:
+      children:
+        - field_dealer_name
+        - field_dealer_contact_person
+        - field_dealer_contact_phone
+      parent_name: ''
+      weight: 2
+      label: 'EVR End User dealership information'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_old_info:
+      children:
+        - field_transferer_name
+        - field_transferer_fid_or_license_
+        - field_transferer_mailing_address
+        - field_transferer_signature
+        - field_date_of_signature
+      parent_name: ''
+      weight: 5
+      label: 'Transferer / Old information'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_new_info:
+      children:
+        - field_transferee_name
+        - field_transferee_fid_or_license_
+        - field_transferee_mailing_address
+      parent_name: ''
+      weight: 6
+      label: 'Transferee / New information'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: submission.license_plate_reassignment.default
+targetEntityType: submission
+bundle: license_plate_reassignment
+mode: default
+content:
+  field_date_of_signature:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_dealer_contact_person:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_dealer_contact_phone:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  field_dealer_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_instruction_details:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_instructions:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_plate_number:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_plate_type:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_plate_types:
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_transferee_fid_or_license_:
+    weight: 17
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_transferee_mailing_address:
+    weight: 18
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+  field_transferee_name:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_transferer_fid_or_license_:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_transferer_mailing_address:
+    weight: 11
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+  field_transferer_name:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_transferer_signature:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  user_id: true

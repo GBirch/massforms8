@@ -1,0 +1,25 @@
+uuid: 89304c7b-23f1-4a0f-99a7-daf7c188d8c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_plate_types
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - markup
+id: submission.license_plate_reassignment.field_plate_types
+field_name: field_plate_types
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Plate Types'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>The following are the ONLY plates that can be reassigned:</p>\r\n\r\n<ul>\r\n\t<li>RW (except for plates with 5 straight numbers)</li>\r\n\t<li>Vanity (PAV)</li>\r\n\t<li>PAS plates (BB, BC, BR, BV, CC, CI, CL, FF, FW, IC, JF, NE, OS, RS, RT, RW, TC, US)</li>\r\n\t<li>PAR plates with four or more characters (must be a combination of letters and numbers)</li>\r\n\t<li>PAR plates that have five non-sequential numbers</li>\r\n\t<li>MCR and TRR plates</li>\r\n</ul>\r\n"
+    format: basic_html
+field_type: markup

@@ -1,0 +1,23 @@
+uuid: cb39bd3e-aa92-433c-8aa7-b52c70051cb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_vehicle_year
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_vehicle_year
+field_name: field_rmv_vehicle_year
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'Vehicle/Equipment Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1900
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

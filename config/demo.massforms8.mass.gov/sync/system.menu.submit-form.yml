@@ -1,0 +1,8 @@
+uuid: b8401488-3ef0-4243-ae45-d4cabeaa0c6f
+langcode: en
+status: true
+dependencies: {  }
+id: submit-form
+label: 'Submit Form'
+description: 'Links to submit forms of different kinds'
+locked: false

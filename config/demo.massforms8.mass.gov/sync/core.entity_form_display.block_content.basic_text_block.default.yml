@@ -1,0 +1,29 @@
+uuid: 36be1b86-c06d-41cb-a0ca-395e05f8fdff
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic_text_block
+    - field.field.block_content.basic_text_block.field_block_text
+  module:
+    - text
+id: block_content.basic_text_block.default
+targetEntityType: block_content
+bundle: basic_text_block
+mode: default
+content:
+  field_block_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: ef922b31-23db-40f4-9e55-549dca8c9ab4
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - mf_submission
+id: submission.field_rmv_improper_markup_detail
+field_name: field_rmv_improper_markup_detail
+entity_type: submission
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

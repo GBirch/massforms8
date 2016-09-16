@@ -1,0 +1,21 @@
+uuid: 2322a0d3-9790-4d0a-a3a6-703a85e072e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_plates2
+    - mf_submission.submission_type.rmv_veterans_plate_application
+  module:
+    - options
+id: submission.rmv_veterans_plate_application.field_plates2
+field_name: field_plates2
+entity_type: submission
+bundle: rmv_veterans_plate_application
+label: Plates2
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

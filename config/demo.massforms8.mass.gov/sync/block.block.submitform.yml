@@ -1,0 +1,32 @@
+uuid: 6e6e0ccc-7178-4fd8-932f-18fe8859a8c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.submit-form
+  module:
+    - system
+    - user
+  theme:
+    - bartik
+id: submitform
+theme: bartik
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'system_menu_block:submit-form'
+settings:
+  id: 'system_menu_block:submit-form'
+  label: 'Submit Form'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

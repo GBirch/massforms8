@@ -1,0 +1,19 @@
+uuid: 2d8247b2-bca2-45dc-b702-0885961532e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_activity_perp_first_name
+    - mf_submission.submission_type.rmv_request_activity_hold
+id: submission.rmv_request_activity_hold.field_activity_perp_first_name
+field_name: field_activity_perp_first_name
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'First Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 80ae6c24-1a63-42f3-becf-9df5c406c2fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_transferee_name
+    - mf_submission.submission_type.license_plate_reassignment
+id: submission.license_plate_reassignment.field_transferee_name
+field_name: field_transferee_name
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Transferee Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

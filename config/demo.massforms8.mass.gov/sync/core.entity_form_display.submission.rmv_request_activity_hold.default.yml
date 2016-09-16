@@ -1,0 +1,212 @@
+uuid: bcd550a7-ace6-4fb2-a17e-87e26e2945c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.rmv_request_activity_hold.field_activity_perp_address
+    - field.field.submission.rmv_request_activity_hold.field_activity_perp_first_name
+    - field.field.submission.rmv_request_activity_hold.field_activity_perp_last_name
+    - field.field.submission.rmv_request_activity_hold.field_available_documentation
+    - field.field.submission.rmv_request_activity_hold.field_cell_phone_number
+    - field.field.submission.rmv_request_activity_hold.field_employers_name
+    - field.field.submission.rmv_request_activity_hold.field_fax_number
+    - field.field.submission.rmv_request_activity_hold.field_first_name
+    - field.field.submission.rmv_request_activity_hold.field_home_address
+    - field.field.submission.rmv_request_activity_hold.field_last_name
+    - field.field.submission.rmv_request_activity_hold.field_license_id_num
+    - field.field.submission.rmv_request_activity_hold.field_markup
+    - field.field.submission.rmv_request_activity_hold.field_markup_for_best_contact
+    - field.field.submission.rmv_request_activity_hold.field_prefered_contact
+    - field.field.submission.rmv_request_activity_hold.field_record_number
+    - field.field.submission.rmv_request_activity_hold.field_request_action
+    - field.field.submission.rmv_request_activity_hold.field_request_reason
+    - field.field.submission.rmv_request_activity_hold.field_rmv_activity_know_perp
+    - field.field.submission.rmv_request_activity_hold.field_rmv_signature_para
+    - field.field.submission.rmv_request_activity_hold.field_ssn
+    - field.field.submission.rmv_request_activity_hold.field_work_phone
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - address
+    - field_group
+    - file
+    - markup
+    - paragraphs
+    - telephone
+third_party_settings:
+  field_group:
+    group_contact_info:
+      children:
+        - field_work_phone
+        - field_cell_phone_number
+        - field_fax_number
+        - field_home_address
+      parent_name: ''
+      weight: 6
+      label: 'Contact Info'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_perp_info:
+      children:
+        - field_activity_perp_first_name
+        - field_activity_perp_last_name
+        - field_activity_perp_address
+      parent_name: ''
+      weight: 11
+      label: 'Perpetrator''s Infor '
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: submission.rmv_request_activity_hold.default
+targetEntityType: submission
+bundle: rmv_request_activity_hold
+mode: default
+content:
+  field_activity_perp_address:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_activity_perp_first_name:
+    type: string_textfield
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_activity_perp_last_name:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_available_documentation:
+    weight: 15
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_cell_phone_number:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  field_employers_name:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_fax_number:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  field_first_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_home_address:
+    weight: 10
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+  field_last_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_license_id_num:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_markup:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_markup_for_best_contact:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_prefered_contact:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_record_number:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_request_action:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_request_reason:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_rmv_activity_know_perp:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_rmv_signature_para:
+    weight: 16
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  field_ssn:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_work_phone:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

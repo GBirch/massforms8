@@ -1,0 +1,19 @@
+uuid: 668ba646-2cdd-468f-8119-0f2cb2e959be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_transferer_signature
+    - mf_submission.submission_type.license_plate_reassignment
+id: submission.license_plate_reassignment.field_transferer_signature
+field_name: field_transferer_signature
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Transferer Signature'
+description: 'Please type your name to sign this form.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

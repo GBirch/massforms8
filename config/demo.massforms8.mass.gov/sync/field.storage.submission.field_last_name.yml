@@ -1,0 +1,21 @@
+uuid: 9c738408-653d-4bc5-8be1-7f3af21b964f
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_last_name
+field_name: field_last_name
+entity_type: submission
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: e1f9ca54-7e20-49e1-9919-a32a8c0395e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_transferer_fid_or_license_
+    - mf_submission.submission_type.license_plate_reassignment
+id: submission.license_plate_reassignment.field_transferer_fid_or_license_
+field_name: field_transferer_fid_or_license_
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Transferer FID or License Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

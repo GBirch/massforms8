@@ -1,0 +1,23 @@
+uuid: 4cdff27e-25b8-4d7a-97ce-2bef8fdc4585
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_police
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_police
+field_name: field_rmv_improper_police
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'Was this Reported to the Police?'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

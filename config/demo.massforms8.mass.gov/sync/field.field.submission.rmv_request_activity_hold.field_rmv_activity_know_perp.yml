@@ -1,0 +1,21 @@
+uuid: 0543c265-68eb-433b-b120-0c75c7abfb7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_activity_know_perp
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - options
+id: submission.rmv_request_activity_hold.field_rmv_activity_know_perp
+field_name: field_rmv_activity_know_perp
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'Do you know the actual name of the person who may have committed fraud using my name or personal information?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

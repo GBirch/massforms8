@@ -1,0 +1,39 @@
+uuid: ead579da-d7a5-4a7a-84f8-57f0e30db961
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_plate_type
+field_name: field_plate_type
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: RW
+      label: 'RW (except for plates with 5 straight numbers)'
+    -
+      value: PAV
+      label: 'Vanity (PAV)'
+    -
+      value: PAS
+      label: 'PAS plates (BB, BC, BR, BV, CC, CI, CL, FF, FW, IC, JF, NE, OS, RS, RT, RW, TC, US)'
+    -
+      value: PAR
+      label: 'PAR plates with four or more characters (must be a combination of letters and numbers)'
+    -
+      value: PAR-NS
+      label: 'PAR plates that have five non-sequential numbers'
+    -
+      value: MCR-TRR
+      label: 'MCR and TRR plates'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

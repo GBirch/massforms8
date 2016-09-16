@@ -1,0 +1,24 @@
+uuid: 46f4b659-b093-4b0b-b503-7741dedbf0f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - bartik
+id: useraccountmenu
+theme: bartik
+region: sidebar_first
+weight: -3
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Your Account'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

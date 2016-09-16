@@ -1,0 +1,96 @@
+uuid: 6079a643-e94f-463d-9ded-d98cefd2214f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.rmv_veterans_plate_application.field_current_plate_number
+    - field.field.submission.rmv_veterans_plate_application.field_daytime_telephone_
+    - field.field.submission.rmv_veterans_plate_application.field_mailing_address
+    - field.field.submission.rmv_veterans_plate_application.field_plates
+    - field.field.submission.rmv_veterans_plate_application.field_plates2
+    - field.field.submission.rmv_veterans_plate_application.field_signature
+    - field.field.submission.rmv_veterans_plate_application.field_vehicle_type
+    - field.field.submission.rmv_veterans_plate_application.field_veteran_s_full_name
+    - mf_submission.submission_type.rmv_veterans_plate_application
+  module:
+    - options
+    - user
+id: submission.rmv_veterans_plate_application.default
+targetEntityType: submission
+bundle: rmv_veterans_plate_application
+mode: default
+content:
+  field_current_plate_number:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_daytime_telephone_:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_mailing_address:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_plates:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_plates2:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_signature:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_vehicle_type:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_veteran_s_full_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  name:
+    label: hidden
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  submitted:
+    label: inline
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

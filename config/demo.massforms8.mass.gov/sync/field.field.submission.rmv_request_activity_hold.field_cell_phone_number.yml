@@ -1,0 +1,21 @@
+uuid: 8576ad21-cf87-45e8-88e8-b6a1f9de8741
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_cell_phone_number
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - telephone
+id: submission.rmv_request_activity_hold.field_cell_phone_number
+field_name: field_cell_phone_number
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'Cell Phone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

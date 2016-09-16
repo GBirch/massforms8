@@ -1,0 +1,21 @@
+uuid: 07809c3e-7f2c-4cc3-ae6e-976956403aa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_dealer_contact_phone
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - telephone
+id: submission.license_plate_reassignment.field_dealer_contact_phone
+field_name: field_dealer_contact_phone
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Dealer Contact Phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

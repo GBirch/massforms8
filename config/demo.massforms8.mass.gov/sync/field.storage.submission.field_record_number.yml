@@ -1,0 +1,21 @@
+uuid: 7df3b6e1-d8b0-4855-97f8-3442fae3adfa
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_record_number
+field_name: field_record_number
+entity_type: submission
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

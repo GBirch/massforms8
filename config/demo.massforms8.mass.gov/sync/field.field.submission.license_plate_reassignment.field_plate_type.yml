@@ -1,0 +1,21 @@
+uuid: 92874e62-3f63-4a4f-ae6e-edc92fb5762f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_plate_type
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - options
+id: submission.license_plate_reassignment.field_plate_type
+field_name: field_plate_type
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Plate Type'
+description: 'The following are the <strong>ONLY</strong> plates that can be reassigned:'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

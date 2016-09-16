@@ -1,0 +1,21 @@
+uuid: c118d7b4-a8d2-4bd4-aa36-0204fd0e03fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_vehicle
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+  module:
+    - options
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_vehicle
+field_name: field_rmv_improper_vehicle
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'The vehicle make, model, and color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

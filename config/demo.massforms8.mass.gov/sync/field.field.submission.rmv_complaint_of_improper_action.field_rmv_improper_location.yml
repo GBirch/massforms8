@@ -1,0 +1,21 @@
+uuid: 24a41ed6-8233-4f58-8c4b-dbf54c140344
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_location
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+  module:
+    - options
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_location
+field_name: field_rmv_improper_location
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'Location of the Incident'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

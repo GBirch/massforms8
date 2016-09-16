@@ -1,0 +1,21 @@
+uuid: d4f551c6-96c6-4fda-b3e1-2d40bc442809
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_request_action
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - options
+id: submission.rmv_request_activity_hold.field_request_action
+field_name: field_request_action
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'I hereby request the RMV to ______ an activity hold on on my Massachusetts Drivers License/ID No.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

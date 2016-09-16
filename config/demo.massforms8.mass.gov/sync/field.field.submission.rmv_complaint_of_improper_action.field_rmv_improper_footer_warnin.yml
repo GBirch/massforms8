@@ -1,0 +1,25 @@
+uuid: 00527bce-213d-48d3-af18-358cc6866e74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_footer_warnin
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+  module:
+    - markup
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_footer_warnin
+field_name: field_rmv_improper_footer_warnin
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'Rmv improper footer warning'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><strong>***PLEASE READ THE FOLLOWING CAREFULLY BEFORE SUBMITTING*** </strong></p>\r\n\r\n<p>The RMV's Driver Control Unit is prepared to investigate this compliant. If a hearing is scheduled in this matter, you will be notified and required to attend. Do not submit this complaint to the agency unless you are prepared to attend the hearing and give your testimony as to what occurred.</p>\r\n\r\n<p><strong>NOTE: This form in its entirety is available to the other party upon request.</strong></p>\r\n"
+    format: basic_html
+field_type: markup

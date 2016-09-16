@@ -1,0 +1,79 @@
+uuid: 4908c355-f6ce-4c82-b407-42f71e58a259
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.rmv_i_pay_tax_complaint_form.field_rmv_compaint_plate
+    - field.field.submission.rmv_i_pay_tax_complaint_form.field_rmv_complaint_address
+    - field.field.submission.rmv_i_pay_tax_complaint_form.field_rmv_complaint_reason
+    - field.field.submission.rmv_i_pay_tax_complaint_form.field_rmv_complaint_state
+    - field.field.submission.rmv_i_pay_tax_complaint_form.field_rmv_complaint_vech_desc
+    - field.field.submission.rmv_i_pay_tax_complaint_form.field_rmv_complaint_years
+    - mf_submission.submission_type.rmv_i_pay_tax_complaint_form
+  module:
+    - address
+    - options
+    - user
+id: submission.rmv_i_pay_tax_complaint_form.default
+targetEntityType: submission
+bundle: rmv_i_pay_tax_complaint_form
+mode: default
+content:
+  field_rmv_compaint_plate:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_rmv_complaint_address:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  field_rmv_complaint_reason:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_rmv_complaint_state:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  field_rmv_complaint_vech_desc:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_rmv_complaint_years:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  name:
+    label: hidden
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  submitted:
+    label: inline
+    type: string
+    weight: -4
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

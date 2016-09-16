@@ -1,0 +1,21 @@
+uuid: 34db00f3-f62f-467b-9176-83ad3abd9645
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_request_reason
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - options
+id: submission.rmv_request_activity_hold.field_request_reason
+field_name: field_request_reason
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'The reason for my request is based on: '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

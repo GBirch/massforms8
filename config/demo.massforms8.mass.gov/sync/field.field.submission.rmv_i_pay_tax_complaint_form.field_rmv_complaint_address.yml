@@ -1,0 +1,34 @@
+uuid: 44aac304-3667-4a52-bf0b-e0181e066d05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_complaint_address
+    - mf_submission.submission_type.rmv_i_pay_tax_complaint_form
+  module:
+    - address
+id: submission.rmv_i_pay_tax_complaint_form.field_rmv_complaint_address
+field_name: field_rmv_complaint_address
+entity_type: submission
+bundle: rmv_i_pay_tax_complaint_form
+label: 'Address where vehicle is located (a specific house number is required):'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  fields:
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    recipient: recipient
+    administrativeArea: '0'
+    sortingCode: '0'
+    organization: '0'
+  langcode_override: ''
+field_type: address

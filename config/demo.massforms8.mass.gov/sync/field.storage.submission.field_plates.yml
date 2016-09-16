@@ -1,0 +1,39 @@
+uuid: 966aa046-b4ee-4b83-b0f1-d043e638eff4
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_plates
+field_name: field_plates
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ssp
+      label: 'Silver Star Plate: Issued to veterans who have been awarded the Silver Star Medal (not silver campaign, battle, or service stars). No fee.'
+    -
+      value: bsp
+      label: 'Bronze Star Plate: Issued to veterans who have been awarded the Bronze Star Medal (not bronze campaign, battle, or service stars). No fee.'
+    -
+      value: cmhp
+      label: 'Congressional Medal of Honor Plate: Issued to veterans who have received the Congressional Medal of Honor. No fee.'
+    -
+      value: lvp
+      label: 'Legion of Valor Plate: Issued to veterans who are members of the Legion of Valor. A Legion of Valor member is eligible for one set of these plates. No fee.'
+    -
+      value: phsp
+      label: 'Pearl Harbor Survivor Plate: Issued to veterans who served in Pearl Harbor on December 7, 1941. A Pearl Harbor survivor is eligible for one set of these plates. No fee.'
+    -
+      value: dfcp
+      label: 'Distinguished Flying Cross Plate: Issued to veterans who have received the Distinguished Flying Cross. No fee.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

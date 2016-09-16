@@ -1,0 +1,36 @@
+uuid: eb8a9d11-28e5-495d-85ec-6eb0b75e64cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_signature_para
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+    - paragraphs.paragraphs_type.rmv_signature
+  module:
+    - entity_reference_revisions
+id: submission.rmv_complaint_of_improper_action.field_rmv_signature_para
+field_name: field_rmv_signature_para
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: Signature
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      rmv_signature: rmv_signature
+    target_bundles_drag_drop:
+      payment_details:
+        weight: 4
+        enabled: false
+      phone_details:
+        weight: 5
+        enabled: false
+      rmv_signature:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

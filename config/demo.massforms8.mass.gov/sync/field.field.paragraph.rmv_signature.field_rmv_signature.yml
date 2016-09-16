@@ -1,0 +1,19 @@
+uuid: f62f8227-3cdc-4d89-8d71-ed89409266bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_rmv_signature
+    - paragraphs.paragraphs_type.rmv_signature
+id: paragraph.rmv_signature.field_rmv_signature
+field_name: field_rmv_signature
+entity_type: paragraph
+bundle: rmv_signature
+label: 'Signature /s/'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

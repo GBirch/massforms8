@@ -1,0 +1,21 @@
+uuid: 082871ad-3eed-4aba-b380-657d1d0a201e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_regist_exp
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+  module:
+    - datetime
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_regist_exp
+field_name: field_rmv_regist_exp
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'Registration Expiration Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

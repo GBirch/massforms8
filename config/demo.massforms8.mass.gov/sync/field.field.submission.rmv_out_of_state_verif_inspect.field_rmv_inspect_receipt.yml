@@ -1,0 +1,27 @@
+uuid: b8d50a9c-e979-49ef-81b8-bdfaea81c2e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_inspect_receipt
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+  module:
+    - file
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_inspect_receipt
+field_name: field_rmv_inspect_receipt
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'Inspection Receipt'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg jpeg tiff png'
+  max_filesize: '2 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

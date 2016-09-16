@@ -1,0 +1,23 @@
+uuid: 397390b9-fa61-4ba6-a2e8-d47b3cf27d6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_prefered_contact
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - options
+id: submission.rmv_request_activity_hold.field_prefered_contact
+field_name: field_prefered_contact
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'Please select prefered contact'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: na
+default_value_callback: ''
+settings: {  }
+field_type: list_string

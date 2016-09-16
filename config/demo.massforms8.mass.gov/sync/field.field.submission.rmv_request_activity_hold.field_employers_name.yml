@@ -1,0 +1,19 @@
+uuid: 6ab1f689-835c-4dbe-a240-e04081759400
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_employers_name
+    - mf_submission.submission_type.rmv_request_activity_hold
+id: submission.rmv_request_activity_hold.field_employers_name
+field_name: field_employers_name
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'Employer''s Name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

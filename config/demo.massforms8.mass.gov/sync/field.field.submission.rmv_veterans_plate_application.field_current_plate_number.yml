@@ -1,0 +1,19 @@
+uuid: e11a9390-5b64-4bd9-b3fc-3b66c99c8556
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_current_plate_number
+    - mf_submission.submission_type.rmv_veterans_plate_application
+id: submission.rmv_veterans_plate_application.field_current_plate_number
+field_name: field_current_plate_number
+entity_type: submission
+bundle: rmv_veterans_plate_application
+label: 'Current plate number'
+description: 'As it appears on your registration'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

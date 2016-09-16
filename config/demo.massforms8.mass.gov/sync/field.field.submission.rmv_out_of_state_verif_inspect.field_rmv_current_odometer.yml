@@ -1,0 +1,23 @@
+uuid: 853217bb-bde7-4bde-9b3a-3cae28307cc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_current_odometer
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_current_odometer
+field_name: field_rmv_current_odometer
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'Current Odometer Reading (if applicable)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: miles
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 5bd49aaf-4cd6-44a5-bb8f-19be6708aa8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_owners_name
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_owners_name
+field_name: field_rmv_owners_name
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'Owner''s Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

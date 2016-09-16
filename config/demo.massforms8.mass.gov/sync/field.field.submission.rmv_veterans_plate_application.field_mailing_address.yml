@@ -1,0 +1,19 @@
+uuid: af8ea960-51d3-435f-90d9-43ad65eec6f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_mailing_address
+    - mf_submission.submission_type.rmv_veterans_plate_application
+id: submission.rmv_veterans_plate_application.field_mailing_address
+field_name: field_mailing_address
+entity_type: submission
+bundle: rmv_veterans_plate_application
+label: 'Mailing Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

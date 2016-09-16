@@ -1,0 +1,33 @@
+uuid: e0548f34-6f4c-4301-adc1-97939d6a5167
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rmv_signature.field_rmv_signature
+    - field.field.paragraph.rmv_signature.field_rmv_signature_date
+    - paragraphs.paragraphs_type.rmv_signature
+  module:
+    - datetime
+id: paragraph.rmv_signature.default
+targetEntityType: paragraph
+bundle: rmv_signature
+mode: default
+content:
+  field_rmv_signature:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_rmv_signature_date:
+    weight: 1
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+hidden:
+  created: true
+  uid: true

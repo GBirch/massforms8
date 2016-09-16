@@ -1,0 +1,19 @@
+uuid: d8446a20-89bc-4fb1-a566-5ffde3a5180b
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - mf_submission
+id: submission.field_markup_for_best_contact
+field_name: field_markup_for_best_contact
+entity_type: submission
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

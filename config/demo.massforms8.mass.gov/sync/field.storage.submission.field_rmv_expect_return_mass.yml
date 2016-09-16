@@ -1,0 +1,20 @@
+uuid: 9ba2b0bd-7a70-44ef-87ac-b8086c825948
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - mf_submission
+id: submission.field_rmv_expect_return_mass
+field_name: field_rmv_expect_return_mass
+entity_type: submission
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

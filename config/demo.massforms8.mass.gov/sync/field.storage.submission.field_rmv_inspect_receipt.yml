@@ -1,0 +1,23 @@
+uuid: b74afb0c-b68d-4322-819a-70e9c9afb337
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - mf_submission
+id: submission.field_rmv_inspect_receipt
+field_name: field_rmv_inspect_receipt
+entity_type: submission
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

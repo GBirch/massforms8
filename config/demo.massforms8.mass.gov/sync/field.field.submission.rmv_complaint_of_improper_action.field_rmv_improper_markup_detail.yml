@@ -1,0 +1,25 @@
+uuid: 0f972cc2-a128-41ff-a4d3-f2f918016075
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_markup_detail
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+  module:
+    - markup
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_markup_detail
+field_name: field_rmv_improper_markup_detail
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'Improper action details'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Please provide the following information concerning the improper operation of the motor vehicle you observed. Be as specific about the details of the incident as possible.</p>\r\n"
+    format: basic_html
+field_type: markup

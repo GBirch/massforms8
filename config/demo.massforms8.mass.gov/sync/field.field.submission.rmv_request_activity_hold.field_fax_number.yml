@@ -1,0 +1,21 @@
+uuid: 3848fcb9-fdbf-48b9-8c1c-08ce8f0b1bef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_fax_number
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - telephone
+id: submission.rmv_request_activity_hold.field_fax_number
+field_name: field_fax_number
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'Fax Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

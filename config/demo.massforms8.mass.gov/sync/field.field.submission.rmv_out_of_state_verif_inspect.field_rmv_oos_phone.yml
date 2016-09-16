@@ -1,0 +1,21 @@
+uuid: 2d6f981b-4275-48ae-9111-aa74a2d89c7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_oos_phone
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+  module:
+    - telephone
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_oos_phone
+field_name: field_rmv_oos_phone
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'Out of State Telephone Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,21 @@
+uuid: dd7859d5-2e75-47c7-a66a-3849cabec8eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_number
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+  module:
+    - telephone
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_number
+field_name: field_rmv_improper_number
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'Telephone Number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

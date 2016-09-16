@@ -1,0 +1,21 @@
+uuid: 545926dd-9559-47eb-bca9-fb3887f9addc
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_rmv_vehicle_make
+field_name: field_rmv_vehicle_make
+entity_type: submission
+type: string
+settings:
+  max_length: 63
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

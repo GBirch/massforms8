@@ -1,0 +1,19 @@
+uuid: ed275945-f700-4bc5-ab09-4fdacd5494ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - mf_submission
+id: submission.field_rmv_improper_footer_warnin
+field_name: field_rmv_improper_footer_warnin
+entity_type: submission
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,123 @@
+uuid: 4a904021-6eb8-4546-a31f-05aec31d3407
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.rmv_veterans_plate_application.field_current_plate_number
+    - field.field.submission.rmv_veterans_plate_application.field_daytime_telephone_
+    - field.field.submission.rmv_veterans_plate_application.field_mailing_address
+    - field.field.submission.rmv_veterans_plate_application.field_plates
+    - field.field.submission.rmv_veterans_plate_application.field_plates2
+    - field.field.submission.rmv_veterans_plate_application.field_signature
+    - field.field.submission.rmv_veterans_plate_application.field_vehicle_type
+    - field.field.submission.rmv_veterans_plate_application.field_veteran_s_full_name
+    - mf_submission.submission_type.rmv_veterans_plate_application
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_a:
+      children:
+        - field_veteran_s_full_name
+        - field_mailing_address
+        - field_daytime_telephone_
+        - field_current_plate_number
+      parent_name: ''
+      weight: 1
+      label: A
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_b:
+      children:
+        - field_vehicle_type
+        - field_plates
+        - field_plates2
+      parent_name: ''
+      weight: 2
+      label: B
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_c:
+      children:
+        - field_signature
+      parent_name: ''
+      weight: 7
+      label: C
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: submission.rmv_veterans_plate_application.default
+targetEntityType: submission
+bundle: rmv_veterans_plate_application
+mode: default
+content:
+  field_current_plate_number:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_daytime_telephone_:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_mailing_address:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_plates:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_plates2:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_signature:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_vehicle_type:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_veteran_s_full_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

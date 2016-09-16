@@ -1,0 +1,19 @@
+uuid: f43327a8-fd9e-4e8c-a0b1-09f80852b761
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - telephone
+id: submission.field_rmv_oos_phone
+field_name: field_rmv_oos_phone
+entity_type: submission
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

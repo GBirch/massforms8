@@ -16,3 +16,4 @@ permissions:
   - 'edit own submissions'
   - 'view own submissions'
   - 'use text format restricted_html'
+  - 'delete own submissions'

@@ -1,0 +1,19 @@
+uuid: 73acca69-1c03-4ba4-8448-73ff577fc465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_license_id_num
+    - mf_submission.submission_type.rmv_request_activity_hold
+id: submission.rmv_request_activity_hold.field_license_id_num
+field_name: field_license_id_num
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'License / ID #'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

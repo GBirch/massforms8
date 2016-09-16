@@ -1,0 +1,21 @@
+uuid: 31ee9765-9148-4f7f-ad15-cd1b56bcc423
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_data_accident
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+  module:
+    - datetime
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_data_accident
+field_name: field_rmv_improper_data_accident
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'Date and time of accident'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

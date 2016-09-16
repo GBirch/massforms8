@@ -1,0 +1,30 @@
+uuid: 03c493de-397a-4131-a497-28f36fb49fea
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_prefered_contact
+field_name: field_prefered_contact
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: na
+      label: N/A
+    -
+      value: work
+      label: 'Work Phone'
+    -
+      value: cell
+      label: 'Cell Phone'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

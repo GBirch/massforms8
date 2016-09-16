@@ -1,0 +1,25 @@
+uuid: a0c3bdfb-b1d0-40fd-a4c9-f4b36bfec8f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_markup_for_best_contact
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - markup
+id: submission.rmv_request_activity_hold.field_markup_for_best_contact
+field_name: field_markup_for_best_contact
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'Markup for best contact'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Should an application for license/ID be submitted in the future, I want to be contacted to confirm or deny the legitimacy of the request.</p>\r\n"
+    format: basic_html
+field_type: markup

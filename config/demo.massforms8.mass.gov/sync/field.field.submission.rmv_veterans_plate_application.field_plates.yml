@@ -1,0 +1,21 @@
+uuid: 50acf034-396e-4388-bfcc-505964732e70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_plates
+    - mf_submission.submission_type.rmv_veterans_plate_application
+  module:
+    - options
+id: submission.rmv_veterans_plate_application.field_plates
+field_name: field_plates
+entity_type: submission
+bundle: rmv_veterans_plate_application
+label: Plates
+description: "None of the above plates are available in branches. Please mail this completed application and the required\r\ndocumentation to the address at the top of the application. The Special Plates Department will mail you the plates.\r\nPlease allow three to four weeks for delivery."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

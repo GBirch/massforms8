@@ -1,0 +1,193 @@
+uuid: 706f5c05-c08c-48c6-b86a-6f31698396c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_current_odometer
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_expect_return_mass
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_inspect_cert
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_inspect_receipt
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_mailing_addr
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_oos_mailing_addr
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_oos_phone
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_oosvi_ack
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_oosvi_intro
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_oosvi_residence_cert
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_owners_name
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_plate_number
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_plate_type
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_regist_exp
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_signature_para
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_vehicle_make
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_vehicle_model
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_vehicle_year
+    - field.field.submission.rmv_out_of_state_verif_inspect.field_rmv_vin
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+  module:
+    - address
+    - datetime
+    - entity_reference_revisions
+    - file
+    - markup
+    - options
+    - telephone
+    - user
+id: submission.rmv_out_of_state_verif_inspect.default
+targetEntityType: submission
+bundle: rmv_out_of_state_verif_inspect
+mode: default
+content:
+  field_rmv_current_odometer:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_rmv_expect_return_mass:
+    weight: 15
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_rmv_inspect_cert:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_rmv_inspect_receipt:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_rmv_mailing_addr:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  field_rmv_oos_mailing_addr:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  field_rmv_oos_phone:
+    weight: 16
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+  field_rmv_oosvi_ack:
+    type: markup
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_rmv_oosvi_intro:
+    type: markup
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_rmv_oosvi_residence_cert:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_rmv_owners_name:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_rmv_plate_number:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_rmv_plate_type:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_rmv_regist_exp:
+    weight: 7
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_rmv_signature_para:
+    type: entity_reference_revisions_entity_view
+    weight: 21
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_rmv_vehicle_make:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_rmv_vehicle_model:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_rmv_vehicle_year:
+    weight: 12
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_rmv_vin:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  name:
+    label: hidden
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  submitted:
+    label: inline
+    type: timestamp_ago
+    weight: 2
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

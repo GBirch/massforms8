@@ -1,0 +1,33 @@
+uuid: d858af4d-3475-4d5b-9e90-d10c92511376
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic_text_block:e02ed1d1-f4fd-47d0-bd3b-97cb9a91b475'
+  module:
+    - block_content
+    - node
+  theme:
+    - bartik
+id: rmvoutofstateinspectionverification
+theme: bartik
+region: '-1'
+weight: -4
+provider: null
+plugin: 'block_content:e02ed1d1-f4fd-47d0-bd3b-97cb9a91b475'
+settings:
+  id: 'block_content:e02ed1d1-f4fd-47d0-bd3b-97cb9a91b475'
+  label: 'RMV: Out-of-State Inspection Verification'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      basic_page: basic_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

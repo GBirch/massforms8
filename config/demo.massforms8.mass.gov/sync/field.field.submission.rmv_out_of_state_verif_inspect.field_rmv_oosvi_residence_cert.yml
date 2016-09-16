@@ -1,0 +1,21 @@
+uuid: 97160f8c-4f19-4819-8000-45a47837f03e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_oosvi_residence_cert
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+  module:
+    - options
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_oosvi_residence_cert
+field_name: field_rmv_oosvi_residence_cert
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'I hereby certify that I am temporarily residing in another jurisdiction because I am ...'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

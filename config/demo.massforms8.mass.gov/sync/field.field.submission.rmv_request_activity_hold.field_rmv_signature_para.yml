@@ -1,0 +1,36 @@
+uuid: 359119d7-f462-41f2-ae1b-1ba013307a59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_signature_para
+    - mf_submission.submission_type.rmv_request_activity_hold
+    - paragraphs.paragraphs_type.rmv_signature
+  module:
+    - entity_reference_revisions
+id: submission.rmv_request_activity_hold.field_rmv_signature_para
+field_name: field_rmv_signature_para
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: Signature
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      rmv_signature: rmv_signature
+    target_bundles_drag_drop:
+      payment_details:
+        weight: 4
+        enabled: false
+      phone_details:
+        weight: 5
+        enabled: false
+      rmv_signature:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions

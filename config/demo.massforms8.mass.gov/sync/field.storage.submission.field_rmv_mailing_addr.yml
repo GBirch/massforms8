@@ -1,0 +1,19 @@
+uuid: beae09cd-52d3-4b72-bd6a-077826028cb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - mf_submission
+id: submission.field_rmv_mailing_addr
+field_name: field_rmv_mailing_addr
+entity_type: submission
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

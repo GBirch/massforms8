@@ -1,0 +1,19 @@
+uuid: b02b9423-dfbc-4891-b259-4b2f5bc8c5ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - mf_submission
+id: submission.field_plate_types
+field_name: field_plate_types
+entity_type: submission
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

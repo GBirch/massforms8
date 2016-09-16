@@ -1,0 +1,25 @@
+uuid: 54ac9af9-6eac-44cf-8d2d-9e4cd971b3f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_markup
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - markup
+id: submission.rmv_request_activity_hold.field_markup
+field_name: field_markup
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: Markup
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>I understand that an Activity Hold will prevent future license/ID transactions, that it will be necessary for me to contact Enforcement Services at the above number in order to arrange any future license/ID transactions to be performed, and that I will be required to provide additional information and/or identification in order for any transaction to be processed. I can provide the following identification or information to substantiate my identification.</p>\r\n"
+    format: basic_html
+field_type: markup

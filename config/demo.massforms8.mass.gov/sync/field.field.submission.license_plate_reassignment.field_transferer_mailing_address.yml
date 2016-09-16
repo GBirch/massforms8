@@ -1,0 +1,33 @@
+uuid: 886737ec-350c-4b55-bbc9-97ff2f9809f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_transferer_mailing_address
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - address
+id: submission.license_plate_reassignment.field_transferer_mailing_address
+field_name: field_transferer_mailing_address
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Transferer Mailing Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    sortingCode: sortingCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    organization: organization
+    recipient: recipient
+  langcode_override: ''
+field_type: address

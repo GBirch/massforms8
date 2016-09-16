@@ -1,0 +1,19 @@
+uuid: a547ba99-f310-4b72-be6b-3053d52c115e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_vehicle_make
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_vehicle_make
+field_name: field_rmv_vehicle_make
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'Vehicle/Equipment Make'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

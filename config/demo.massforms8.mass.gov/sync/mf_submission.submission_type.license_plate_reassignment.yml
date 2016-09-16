@@ -1,0 +1,6 @@
+uuid: 3f13cb11-7a5a-4414-9b6a-f97b0d6d8e2a
+langcode: en
+status: true
+dependencies: {  }
+id: license_plate_reassignment
+label: 'Request for a License Plate Reassignment'

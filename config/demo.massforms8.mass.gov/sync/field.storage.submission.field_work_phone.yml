@@ -1,0 +1,19 @@
+uuid: 5952f623-02c9-442d-91d7-c89df1314147
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - telephone
+id: submission.field_work_phone
+field_name: field_work_phone
+entity_type: submission
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: 9cc4babb-c4aa-4eb3-9d25-c7eab8546782
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_rmv_activity_know_perp
+field_name: field_rmv_activity_know_perp
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'true'
+      label: 'I do'
+    -
+      value: 'false'
+      label: 'I do not'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 40d7eaef-9b02-4737-9234-dd4c057f70e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_rmv_complaint_vech_desc
+field_name: field_rmv_complaint_vech_desc
+entity_type: submission
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

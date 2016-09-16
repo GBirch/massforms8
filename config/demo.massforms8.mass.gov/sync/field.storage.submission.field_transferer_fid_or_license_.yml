@@ -1,0 +1,21 @@
+uuid: 345dd54c-aed9-4c1d-8354-8c72e7a373c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_transferer_fid_or_license_
+field_name: field_transferer_fid_or_license_
+entity_type: submission
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

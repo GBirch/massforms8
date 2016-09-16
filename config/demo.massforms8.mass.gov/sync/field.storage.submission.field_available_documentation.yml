@@ -1,0 +1,23 @@
+uuid: 8b0009c3-a02e-4b90-b842-77a133ebd654
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - mf_submission
+id: submission.field_available_documentation
+field_name: field_available_documentation
+entity_type: submission
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

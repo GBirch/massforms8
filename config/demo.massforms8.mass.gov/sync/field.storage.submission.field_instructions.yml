@@ -1,0 +1,19 @@
+uuid: 5dd9e6f6-60c3-4c3a-a86c-d271d26be7ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - markup
+    - mf_submission
+id: submission.field_instructions
+field_name: field_instructions
+entity_type: submission
+type: markup
+settings: {  }
+module: markup
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

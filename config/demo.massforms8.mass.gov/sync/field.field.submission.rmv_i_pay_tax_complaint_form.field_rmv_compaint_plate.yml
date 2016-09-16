@@ -1,0 +1,19 @@
+uuid: 3ea2da79-1b0e-46f2-9319-a4e9e987c845
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_compaint_plate
+    - mf_submission.submission_type.rmv_i_pay_tax_complaint_form
+id: submission.rmv_i_pay_tax_complaint_form.field_rmv_compaint_plate
+field_name: field_rmv_compaint_plate
+entity_type: submission
+bundle: rmv_i_pay_tax_complaint_form
+label: 'Plate #'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

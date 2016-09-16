@@ -1,0 +1,19 @@
+uuid: a9d88cc8-28f0-46fd-b245-87837f62a759
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - mf_submission
+id: submission.field_transferer_mailing_address
+field_name: field_transferer_mailing_address
+entity_type: submission
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

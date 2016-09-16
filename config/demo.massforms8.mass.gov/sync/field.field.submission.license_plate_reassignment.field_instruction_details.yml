@@ -1,0 +1,25 @@
+uuid: c924b8ee-f201-4b4b-a78d-2abe98ab7872
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_instruction_details
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - markup
+id: submission.license_plate_reassignment.field_instruction_details
+field_name: field_instruction_details
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Instruction Details'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h2>Instructions for Completing Reassignment of Plates Form</h2>\r\n\r\n<ol>\r\n\t<li>Complete the requested <strong>End User</strong> dealership information.</li>\r\n\t<li>Complete the <strong>Registration</strong> information section.</li>\r\n\t<li>Complete the <strong>Transferer</strong> information section. This includes the information on the current owner and must include the owner’s signature and the date of the transfer.</li>\r\n\t<li>Complete the Transferee information. This is where information about the individual or company that is about to take possession of the plate must be recorded.</li>\r\n\t<li>Fax the front of this form to the <strong>RMV</strong> at 857-368-0819. It is not necessary to call the <strong>RMV</strong>; the fax machine is monitored daily.</li>\r\n\t<li>Please process an inquiry transaction within a half hour to make sure that the plate has been canceled. The <strong>RMV</strong> will mail the Registration Cancellation Receipt to the original owner.</li>\r\n\t<li>Your EVR software has 3 plate type options: New, Transfer, and Reassignment. Select the <strong>Reassignment</strong> option to complete this type of transaction. You do not need to add the plate to the EVR plate inventory.</li>\r\n\t<li>Proceed with the transaction.</li>\r\n\t<li>Make a copy of this form and file it in the customer folder.</li>\r\n\t<li>Attach the original reassignment form to the original RMV-1 and submit it to the <strong>RMV</strong>.</li>\r\n</ol>\r\n\r\n<p>You cannot use UMS or EVR registration cancellation capability to process a plate reassignment.</p>\r\n"
+    format: basic_html
+field_type: markup

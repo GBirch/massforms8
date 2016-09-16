@@ -1,0 +1,33 @@
+uuid: d6654de8-7b74-4feb-93a2-a34ce5c0668d
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_request_reason
+field_name: field_request_reason
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: lost
+      label: 'My identification has been lost.'
+    -
+      value: stolen
+      label: 'My identification has been stolen and, as a result, I am concerned that someone may attempt to perform Registry transactions fraudulently with it.'
+    -
+      value: personal_info
+      label: 'I have information that someone actually acquired a document from the RMV using my personal information.'
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: f5278ad6-9ea5-4bf2-914d-3bf246a5c78b
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_rmv_complaint_years
+field_name: field_rmv_complaint_years
+entity_type: submission
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

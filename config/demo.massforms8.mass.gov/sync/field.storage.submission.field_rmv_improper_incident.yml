@@ -1,0 +1,19 @@
+uuid: b0a9b017-1af3-4dff-a57d-5b3cf5c0b987
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - mf_submission
+id: submission.field_rmv_improper_incident
+field_name: field_rmv_improper_incident
+entity_type: submission
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

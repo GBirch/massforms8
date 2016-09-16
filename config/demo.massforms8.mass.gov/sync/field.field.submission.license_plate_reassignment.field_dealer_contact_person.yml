@@ -1,0 +1,19 @@
+uuid: 1d343409-91d0-4860-af8b-29ba1d83086d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_dealer_contact_person
+    - mf_submission.submission_type.license_plate_reassignment
+id: submission.license_plate_reassignment.field_dealer_contact_person
+field_name: field_dealer_contact_person
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Dealer Contact Person'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

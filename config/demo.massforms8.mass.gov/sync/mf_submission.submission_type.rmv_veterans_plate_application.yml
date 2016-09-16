@@ -1,0 +1,6 @@
+uuid: 85d506e2-1c4d-4dc1-93fe-1b90588e00b6
+langcode: en
+status: true
+dependencies: {  }
+id: rmv_veterans_plate_application
+label: 'RMV Veterans Plate Application'

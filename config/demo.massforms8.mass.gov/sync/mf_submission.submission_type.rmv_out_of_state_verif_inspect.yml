@@ -1,0 +1,6 @@
+uuid: cdc631e0-0aa8-4314-aa6b-8e892d22de91
+langcode: en
+status: true
+dependencies: {  }
+id: rmv_out_of_state_verif_inspect
+label: 'RMV-Out-of-State Verification Inspection Form '

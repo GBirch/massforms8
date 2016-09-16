@@ -1,0 +1,19 @@
+uuid: d29c8f39-e9d2-45a0-9641-1781df10ddb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_veteran_s_full_name
+    - mf_submission.submission_type.rmv_veterans_plate_application
+id: submission.rmv_veterans_plate_application.field_veteran_s_full_name
+field_name: field_veteran_s_full_name
+entity_type: submission
+bundle: rmv_veterans_plate_application
+label: 'Veteran''s Full Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

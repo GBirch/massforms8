@@ -1,0 +1,27 @@
+uuid: c44fcee5-bad4-4e7f-a80d-591d6c9468a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_vehicle_type
+field_name: field_vehicle_type
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: passenger
+      label: 'Passenger Plates'
+    -
+      value: motorcycle
+      label: 'Motorcycle Plates'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

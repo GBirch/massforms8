@@ -1,0 +1,21 @@
+uuid: cafe80c7-90bd-4fca-8db6-c1d40d001f93
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - mf_submission
+    - paragraphs
+id: submission.field_rmv_signature_para
+field_name: field_rmv_signature_para
+entity_type: submission
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

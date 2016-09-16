@@ -1,0 +1,19 @@
+uuid: fc0b51ee-425c-4443-bd22-e75a51988eda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_reg_num
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_reg_num
+field_name: field_rmv_improper_reg_num
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'vehicle registration '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

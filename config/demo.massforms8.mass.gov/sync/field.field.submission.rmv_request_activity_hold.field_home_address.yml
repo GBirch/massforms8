@@ -1,0 +1,34 @@
+uuid: f2fc9725-0819-4ebe-85ed-882771ded26c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_home_address
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - address
+id: submission.rmv_request_activity_hold.field_home_address
+field_name: field_home_address
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    US: US
+  fields:
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    administrativeArea: '0'
+    sortingCode: '0'
+    organization: '0'
+    recipient: '0'
+  langcode_override: ''
+field_type: address

@@ -1,0 +1,21 @@
+uuid: c602ceac-367a-47c0-8d5f-e467ab729503
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_rmv_improper_vehicle
+field_name: field_rmv_improper_vehicle
+entity_type: submission
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

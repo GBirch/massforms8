@@ -1,0 +1,20 @@
+uuid: f62841c7-f7fb-4b39-ae98-9bd3a348523d
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_rmv_current_odometer
+field_name: field_rmv_current_odometer
+entity_type: submission
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

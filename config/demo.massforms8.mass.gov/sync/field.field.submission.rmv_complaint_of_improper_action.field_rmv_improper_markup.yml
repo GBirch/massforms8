@@ -1,0 +1,25 @@
+uuid: 32fb845a-855a-42d0-b7fc-0b73b4362e78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_improper_markup
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+  module:
+    - markup
+id: submission.rmv_complaint_of_improper_action.field_rmv_improper_markup
+field_name: field_rmv_improper_markup
+entity_type: submission
+bundle: rmv_complaint_of_improper_action
+label: 'Filing Complaint'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>I am filing a complaint with the Registry of Motor Vehicles concerning the improper operation of a motor vehicle.</p>\r\n"
+    format: basic_html
+field_type: markup

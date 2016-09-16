@@ -1,0 +1,19 @@
+uuid: 3d80b7d2-3c1a-4886-9e10-1064a92fe341
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - mf_submission
+id: submission.field_rmv_improper_address
+field_name: field_rmv_improper_address
+entity_type: submission
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

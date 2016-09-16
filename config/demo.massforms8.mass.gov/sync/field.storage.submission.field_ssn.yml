@@ -1,0 +1,21 @@
+uuid: 4bd0175e-1d56-4842-94d6-0b9e97e49fce
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_ssn
+field_name: field_ssn
+entity_type: submission
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

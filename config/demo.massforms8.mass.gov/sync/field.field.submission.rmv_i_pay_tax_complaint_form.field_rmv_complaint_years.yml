@@ -1,0 +1,21 @@
+uuid: a3bdcb1a-5bb7-490b-aaf1-9ad193ae654e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_complaint_years
+    - mf_submission.submission_type.rmv_i_pay_tax_complaint_form
+  module:
+    - options
+id: submission.rmv_i_pay_tax_complaint_form.field_rmv_complaint_years
+field_name: field_rmv_complaint_years
+entity_type: submission
+bundle: rmv_i_pay_tax_complaint_form
+label: 'How long has the vehicle been located at this address?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

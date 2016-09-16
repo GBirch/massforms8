@@ -1,0 +1,19 @@
+uuid: 3012cc44-421d-4763-8830-26e03c0a5db5
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - telephone
+id: submission.field_cell_phone_number
+field_name: field_cell_phone_number
+entity_type: submission
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

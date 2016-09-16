@@ -1,0 +1,21 @@
+uuid: 24964025-f950-4b0d-93df-421db223bc98
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_dealer_contact_person
+field_name: field_dealer_contact_person
+entity_type: submission
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

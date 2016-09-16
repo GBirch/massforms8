@@ -1,0 +1,21 @@
+uuid: ff922acc-e641-4a99-bd39-ce5153670d42
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_rmv_improper_police_dept
+field_name: field_rmv_improper_police_dept
+entity_type: submission
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

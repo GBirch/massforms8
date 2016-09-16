@@ -1,0 +1,25 @@
+uuid: 25de570e-c027-4568-9b4c-f7fc4083c364
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_rmv_oosvi_intro
+    - mf_submission.submission_type.rmv_out_of_state_verif_inspect
+  module:
+    - markup
+id: submission.rmv_out_of_state_verif_inspect.field_rmv_oosvi_intro
+field_name: field_rmv_oosvi_intro
+entity_type: submission
+bundle: rmv_out_of_state_verif_inspect
+label: 'Intro Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>This form is used to verify that your vehicle or equipment is out-of-state, and will miss its required annual Massachusetts vehicle inspection. Please type or print all requested information. Forms not accompanied by satisfactory proof will be rejected.</p>\r\n"
+    format: basic_html
+field_type: markup

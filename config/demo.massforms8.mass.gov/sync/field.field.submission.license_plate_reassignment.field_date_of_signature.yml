@@ -1,0 +1,24 @@
+uuid: 3d63c13b-7b42-4819-b063-0866eb809803
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_date_of_signature
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - datetime
+id: submission.license_plate_reassignment.field_date_of_signature
+field_name: field_date_of_signature
+entity_type: submission
+bundle: license_plate_reassignment
+label: 'Date of signature'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

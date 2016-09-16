@@ -1,0 +1,166 @@
+uuid: 1ed124a5-24b6-47d0-8712-1795241c422a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_address
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_data_accident
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_date_of_birth
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_description
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_first_name
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_footer_warnin
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_incident
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_last_name
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_location
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_markup
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_markup_detail
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_number
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_police
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_police_dept
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_reg_num
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_improper_vehicle
+    - field.field.submission.rmv_complaint_of_improper_action.field_rmv_signature_para
+    - mf_submission.submission_type.rmv_complaint_of_improper_action
+  module:
+    - address
+    - datetime
+    - field_group
+    - markup
+    - paragraphs
+    - telephone
+third_party_settings:
+  field_group:
+    group_complainant_info:
+      children:
+        - field_rmv_improper_first_name
+        - field_rmv_improper_last_name
+        - field_rmv_improper_date_of_birth
+        - field_rmv_improper_number
+        - field_rmv_improper_address
+      parent_name: ''
+      weight: 4
+      label: 'Complainant Information'
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: submission.rmv_complaint_of_improper_action.default
+targetEntityType: submission
+bundle: rmv_complaint_of_improper_action
+mode: default
+content:
+  field_rmv_improper_address:
+    weight: 9
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+  field_rmv_improper_data_accident:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_rmv_improper_date_of_birth:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_rmv_improper_description:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_rmv_improper_first_name:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_rmv_improper_footer_warnin:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_rmv_improper_incident:
+    weight: 12
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+  field_rmv_improper_last_name:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_rmv_improper_location:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_rmv_improper_markup:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_rmv_improper_markup_detail:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_rmv_improper_number:
+    weight: 8
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  field_rmv_improper_police:
+    weight: 14
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_rmv_improper_police_dept:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_rmv_improper_reg_num:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_rmv_improper_vehicle:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_rmv_signature_para:
+    weight: 17
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

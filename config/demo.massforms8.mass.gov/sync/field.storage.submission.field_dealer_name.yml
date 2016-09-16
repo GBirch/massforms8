@@ -1,0 +1,21 @@
+uuid: b1d4636a-4665-46e8-a95f-ddc10119654d
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_dealer_name
+field_name: field_dealer_name
+entity_type: submission
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

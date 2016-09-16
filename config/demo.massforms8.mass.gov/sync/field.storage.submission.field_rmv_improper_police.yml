@@ -1,0 +1,18 @@
+uuid: 8bb394f1-d1db-490d-af74-af6208afc8b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+id: submission.field_rmv_improper_police
+field_name: field_rmv_improper_police
+entity_type: submission
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

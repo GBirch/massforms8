@@ -1,0 +1,21 @@
+uuid: 0f2210b7-daf8-43c8-b998-8ce08f872e53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_vehicle_type
+    - mf_submission.submission_type.rmv_veterans_plate_application
+  module:
+    - options
+id: submission.rmv_veterans_plate_application.field_vehicle_type
+field_name: field_vehicle_type
+entity_type: submission
+bundle: rmv_veterans_plate_application
+label: 'I''m applying for'
+description: 'Check One'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 379b1ccf-8540-4a77-91c9-ce1b96232808
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.submission.field_work_phone
+    - mf_submission.submission_type.rmv_request_activity_hold
+  module:
+    - telephone
+id: submission.rmv_request_activity_hold.field_work_phone
+field_name: field_work_phone
+entity_type: submission
+bundle: rmv_request_activity_hold
+label: 'Work Phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

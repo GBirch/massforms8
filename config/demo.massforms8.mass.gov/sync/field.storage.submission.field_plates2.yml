@@ -1,0 +1,27 @@
+uuid: 11211dee-ee9e-41e5-8411-f70baf7c4c19
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_plates2
+field_name: field_plates2
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: php
+      label: 'Purple Heart Plate: Issued to veterans who have been awarded the Purple Heart Medal. Available in all branches. No fee.'
+    -
+      value: epp
+      label: 'Ex-POW Plate: Issued to veterans who are former prisoners of war. Available in all branches. An Ex-POW is eligible for one set of these plates. No fee.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

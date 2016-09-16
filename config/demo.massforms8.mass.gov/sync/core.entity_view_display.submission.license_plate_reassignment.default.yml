@@ -1,0 +1,164 @@
+uuid: f583a3d9-5ca7-4eca-8140-9c3049e7d050
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.submission.license_plate_reassignment.field_date_of_signature
+    - field.field.submission.license_plate_reassignment.field_dealer_contact_person
+    - field.field.submission.license_plate_reassignment.field_dealer_contact_phone
+    - field.field.submission.license_plate_reassignment.field_dealer_name
+    - field.field.submission.license_plate_reassignment.field_instruction_details
+    - field.field.submission.license_plate_reassignment.field_instructions
+    - field.field.submission.license_plate_reassignment.field_plate_number
+    - field.field.submission.license_plate_reassignment.field_plate_type
+    - field.field.submission.license_plate_reassignment.field_plate_types
+    - field.field.submission.license_plate_reassignment.field_transferee_fid_or_license_
+    - field.field.submission.license_plate_reassignment.field_transferee_mailing_address
+    - field.field.submission.license_plate_reassignment.field_transferee_name
+    - field.field.submission.license_plate_reassignment.field_transferer_fid_or_license_
+    - field.field.submission.license_plate_reassignment.field_transferer_mailing_address
+    - field.field.submission.license_plate_reassignment.field_transferer_name
+    - field.field.submission.license_plate_reassignment.field_transferer_signature
+    - mf_submission.submission_type.license_plate_reassignment
+  module:
+    - address
+    - datetime
+    - markup
+    - options
+    - telephone
+    - user
+id: submission.license_plate_reassignment.default
+targetEntityType: submission
+bundle: license_plate_reassignment
+mode: default
+content:
+  field_date_of_signature:
+    weight: 13
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_dealer_contact_person:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_dealer_contact_phone:
+    weight: 6
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+  field_dealer_name:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_instruction_details:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_instructions:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_plate_number:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_plate_type:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_plate_types:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: markup
+  field_transferee_fid_or_license_:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_transferee_mailing_address:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  field_transferee_name:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_transferer_fid_or_license_:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_transferer_mailing_address:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  field_transferer_name:
+    weight: 9
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_transferer_signature:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  name:
+    label: hidden
+    type: string
+    weight: 1
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  submitted:
+    label: inline
+    type: timestamp_ago
+    weight: 2
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

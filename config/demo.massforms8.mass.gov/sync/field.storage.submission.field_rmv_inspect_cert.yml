@@ -1,0 +1,27 @@
+uuid: 6193703e-2976-44f0-97e1-33c90785f880
+langcode: en
+status: true
+dependencies:
+  module:
+    - mf_submission
+    - options
+id: submission.field_rmv_inspect_cert
+field_name: field_rmv_inspect_cert
+entity_type: submission
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: certifyInspect
+      label: 'I hereby certify that the above vehicle or equipment has passed the inspection required by the jurisdiction in which the vehicle is currently domiciled. As proof, I have attached a copy of my passing inspection receipt. (Note: For commercial vehicles, check this box and attach a copy of an FMVSA / “DOT” Inspection Form or FMVSA / “DOT” equivalent state inspection.)'
+    -
+      value: noInspect
+      label: 'I hereby certify that the jurisdiction in which the above vehicle or equipment is currently domiciled lacks an inspection program or does not inspect vehicles registered in other jurisdictions.'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
